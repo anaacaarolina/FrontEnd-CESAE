@@ -43,5 +43,5 @@ console.log(facialHair);
 
 console.log(" ");
 
-let promptedName = prompt("Qual é o seu nome?");
-console.log(promptedName);
+let promptedName = prompt("Qual é o seu primeiro e último nome?");
+alert(`Olá, ${promptedName}!`);
