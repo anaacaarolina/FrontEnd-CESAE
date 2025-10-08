@@ -1,47 +1,47 @@
-let myLuckNumber = 7;
-const myName = "Carolina";
+// let myLuckNumber = 7;
+// const myName = "Carolina";
 
-console.log("Nome: " + myName + "\nNúmero da sorte: " + myLuckNumber);
+// console.log("Nome: " + myName + "\nNúmero da sorte: " + myLuckNumber);
 
-while (myLuckNumber < 10) {
-  myLuckNumber++;
-  console.log("Número da sorte atualizado: " + myLuckNumber);
-}
+// while (myLuckNumber < 10) {
+//   myLuckNumber++;
+//   console.log("Número da sorte atualizado: " + myLuckNumber);
+// }
 
-console.log(" ");
+// console.log(" ");
 
-let year = "1998";
-year = year + 1;
-console.log(year);
+// let year = "1998";
+// year = year + 1;
+// console.log(year);
 
-const city = "Kiyoto";
-const country = "Japan";
-const combo = city + country;
-console.log(combo);
+// const city = "Kiyoto";
+// const country = "Japan";
+// const combo = city + country;
+// console.log(combo);
 
-const animal = "hippopotamus";
-console.log(animal[7]);
+// const animal = "hippopotamus";
+// console.log(animal[7]);
 
-let curso = "Front End";
-console.log(curso[5]);
+// let curso = "Front End";
+// console.log(curso[5]);
 
-console.log(" ");
+// console.log(" ");
 
-const message = "            TASTE THE RAINBOW!     ";
-console.log(message);
-whisper = message.trim().toLowerCase();
-console.log(whisper);
+// const message = "            TASTE THE RAINBOW!     ";
+// console.log(message);
+// whisper = message.trim().toLowerCase();
+// console.log(whisper);
 
-console.log(" ");
+// console.log(" ");
 
-const word = "skateboard";
-console.log(word);
-let subword = word.substring(5, 10);
-console.log(subword);
-let facialHair = subword.replace("o", "e");
-console.log(facialHair);
+// const word = "skateboard";
+// console.log(word);
+// let subword = word.substring(5, 10);
+// console.log(subword);
+// let facialHair = subword.replace("o", "e");
+// console.log(facialHair);
 
-console.log(" ");
+// console.log(" ");
 
 // let promptedName = prompt("Qual é o seu primeiro e último nome?");
 // alert(`Olá, ${promptedName}!`);
@@ -88,15 +88,12 @@ console.log(" ");
 
 // let planetas = ["Mercúrio", "Vénus", "Terra", "Mart", "Júpiter", "Saturno", "Urano", "Neptuno", "Plutão"];
 
-// let planetasCorrigido = planetas.splice(3, 1, "Marte");
+// planetas[3] = "Marte";
 
-// console.log(planetasCorrigido);
+// planetas.pop();
 // console.log(planetas);
 
-// let planetasSemPlutao = planetas.pop();
-// console.log(planetas);
-
-// let planetasNovo = planetas.push("Europa");
+// planetas.unshift("Europa");
 // console.log(planetas);
 
 // const airplaneSeats = [
@@ -106,18 +103,20 @@ console.log(" ");
 //   ["Luke", null, "Deniz"],
 //   ["Rin", "Sakura", "Francisco"],
 // ];
+// console.log(airplaneSeats);
 
-// let lugaresCorrigidos = airplaneSeats[3].splice(1, 1, "Carolina");
-// console.log(airplaneSeats[0]);
-// console.log(airplaneSeats[1]);
-// console.log(airplaneSeats[2]);
-// console.log(airplaneSeats[3]);
-// console.log(airplaneSeats[4]);
+// airplaneSeats[3][1] = "Carolina";
 
-// const product = { nome: "Camisola", inStock: true, Price: 2.55, Colors: ["vermelho", "azul", "verde"] };
+// console.log(airplaneSeats);
 
-// console.log(product["Price"]);
-// console.log(product.Colors[2]);
+let product = { nome: "Camisola", inStock: true, Price: 1.99, Colors: ["vermelho", "azul", "verde"] };
+
+console.log(product["Price"]);
+console.log(product.Colors[2]);
+
+product.Price = 2.55;
+
+console.log(product.Price);
 
 for (i = 0; i < 26; i++) {
   console.log("I Know");
@@ -125,3 +124,19 @@ for (i = 0; i < 26; i++) {
 for (i = 25; i >= 1; i -= 5) {
   console.log(i);
 }
+
+// const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"];
+// let peopleMaiuscula = people.map((nome) => nome.toUpperCase());
+// console.log(peopleMaiuscula);
+
+// const listaCompras = [];
+// let promptProduto = "";
+
+// while (promptProduto !== "fim") {
+//   promptProduto = prompt("Escreva o nome de um produto: ");
+//   if (promptProduto == "fim") break;
+//   listaCompras.push(promptProduto);
+// }
+// if (listaCompras.length !== 0) {
+//   console.log("Lista de compras: " + listaCompras);
+// }
