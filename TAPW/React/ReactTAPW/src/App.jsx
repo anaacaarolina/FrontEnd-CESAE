@@ -9,10 +9,22 @@ import CourseGoal from "./components/CourseGoal";
 import userData from "./data/userData.js";
 import objetivos from "./data/objetivos.js";
 import courseGoal from "./data/courseGoal.js";
+import Botao from "./components/botao.jsx";
+import Login from "./components/Login.jsx";
 
 <img src={reactLogo} className="logo react" />;
 
 function App() {
+  let chosenSubject = "Escolha a matéria: ";
+
+  function alertHeySubmit() {
+    alert("Atenção! Ainda falta documento para pagamento!");
+  }
+  function getSubject(subject) {
+    alert("Matéria completa de " + subject);
+    chosenSubject = subject;
+  }
+
   return (
     <>
       <FirstComponent />
@@ -25,15 +37,24 @@ function App() {
         </a>
       </div>
       <h1>Front End Developer: React</h1>
+      <CourseGoal {...courseGoal} />
       <Card firstName="Carolina" title="aluna" />
       <Card firstName={userData.firstName} lastName={userData.lastName} title={userData.title} />
       <Card {...userData} />
+      <Botao aoClicar={alertHeySubmit}>Submeter</Botao>
       <MainGoal objetivo={objetivos[0]} />
       <MainGoal objetivo={objetivos[1]} />
       <MainGoal objetivo={objetivos[2]} />
       <FirstComponent />
-      <CourseGoal {...courseGoal} />
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <h3>Eventos Dinâmicos</h3>
+      <menu>
+        <Botao aoClicar={() => getSubject("JS")}>Matéria JS</Botao>
+        <Botao aoClicar={() => getSubject("React")}>Matéria React</Botao>
+        <Botao aoClicar={() => getSubject("SQL")}>Matéria SQL</Botao>
+        <div>{chosenSubject}</div>
+      </menu>
+      <Login />
     </>
   );
 }

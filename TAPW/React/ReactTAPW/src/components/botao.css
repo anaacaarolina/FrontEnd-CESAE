@@ -1,4 +1,6 @@
 button {
-  background-color: red;
+  background-color: palevioletred;
   color: white;
+  margin: 15px;
+  border: aquamarine 1px solid;
 }
