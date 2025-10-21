@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carolina Pinto - Inscrição</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container_header">
+        <img src="assets/logo.png" />
+        <nav>
+          <div class="topnav">
+            <a class="links_nav" href="index.html">Página Inicial</a>
+            <a class="links_nav" href="inscricao.html">Inscrição</a>
+            <a class="links_nav" href="contactos.html">Contactos</a>
+            <a class="links_nav" href="sobre.html">Sobre</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="titulos">
+      <h1>Inscreva-se num curso</h1>
+    </div>
+    <div class="formulario_inscricao">
+      <form>
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" required placeholder="Introduza o seu nome" />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Introduza o seu email" />
+        <label for="telemovel">Telemóvel</label>
+        <input type="tel" id="telemovel" name="telemovel" required placeholder="Introduza o seu número de telemóvel" />
+        <label for="curso">Selecione o Curso</label>
+        <select id="curso" name="curso" required>
+          <option value="">-- Escolha um curso --</option>
+          <option value="front-end-development">Front-End Development</option>
+          <option value="back-end-development">Back-End Development</option>
+          <option value="full-stack-development">Full-Stack Development</option>
+          <option value="marketing-digital">Marketing Digital</option>
+        </select>
+        <label for="mensagem">Mensagem Adicional</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva uma mensagem adicional (opcional)"></textarea>
+        <button type="submit">Inscrever</button>
+      </form>
+    </div>
+    <footer>
+      <div class="container_footer">
+        <div class="icones_footer">
+          <a href="facebook.com"><img class="svgs_footer" src="assets/facebook.svg" /></a>
+          <a href="instagram.com"><img class="svgs_footer" src="assets/instagram.svg" /></a>
+          <a href="github.com"><img class="svgs_footer" src="assets/github.svg" /></a>
+          <a href="reddit.com"><img class="svgs_footer" src="assets/reddit.svg" /></a>
+        </div>
+        <div class="texto_footer"><p>© 2025 Carolina Pinto. All rights reserved.</p></div>
+        <div class="navegacao_footer">
+          <ul>
+            <li>
+              <a> <a class="links_footer" href="index.html">Página Inicial</a> </a>
+            </li>
+            <li><a class="links_footer" href="inscricao.html">Inscrição</a></li>
+            <li><a class="links_footer" href="contactos.html">Contactos</a></li>
+            <li><a class="links_footer" href="sobre.html">Sobre</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

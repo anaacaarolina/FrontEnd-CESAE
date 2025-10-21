@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+
+:root {
+  --branco: #fef4f3;
+  --preto: #0a0908;
+  --rosa: #990033;
+  --amendoa: #ffe6ce;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  background-color: var(--branco);
+  color: var(--preto);
+  font-family: "Geologica", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Serif", serif;
+  color: var(--preto);
+}
+.titulos {
+  text-align: center;
+  margin: 2% 0;
+}
+
+/* HEADER */
+.container_header {
+  background-color: var(--amendoa);
+  text-align: center;
+  padding: 20px;
+}
+header img {
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 2%;
+}
+.links_nav {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: var(--rosa);
+  font-weight: bold;
+  margin: 0 5%;
+}
+.links_nav::after,
+.links_nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--rosa);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+.links_nav::before {
+  top: -5px;
+  transform-origin: left;
+}
+.links_nav:hover::after,
+.links_nav:hover::before {
+  transform: scaleX(1);
+}
+
+/* FOOTER */
+.container_footer {
+  background-color: var(--amendoa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  bottom: 0;
+}
+.icones_footer {
+  text-align: center;
+  width: 30%;
+}
+.svgs_footer {
+  width: 40px;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+.svgs_footer:hover {
+  fill: var(--rosa);
+  transform: scale(1.05);
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.4));
+  transition: 0.3s ease-in-out;
+}
+.texto_footer {
+  text-align: center;
+  width: 40%;
+}
+.navegacao_footer {
+  width: 30%;
+}
+footer ul {
+  list-style-type: none;
+}
+.links_footer {
+  text-decoration: none;
+  color: var(--rosa);
+  font-weight: bold;
+  line-height: 30px;
+  transition: 0.3s ease;
+}
+.links_footer:hover {
+  color: #550011;
+  transition: 0.3s ease;
+}
+
+/* INDEX */
+.container_main_index {
+  margin-bottom: 3%;
+}
+
+.lista_index {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.temas_index {
+  display: block;
+  line-height: 30px;
+}
+.tabela_index {
+  display: flex;
+  justify-content: center;
+}
+table {
+  width: 90%;
+  text-align: center;
+  border: 2px solid var(--rosa);
+}
+th,
+td {
+  border: 1px solid var(--rosa);
+  padding: 5px;
+}
+/* INSCRIÇÃO */
+.formulario_inscricao {
+  display: flex;
+  flex-direction: column;
+  margin: 2% auto;
+  background-color: var(--amendoa);
+  width: 75%;
+  border-radius: 25px;
+  padding: 2%;
+}
+label {
+  display: block;
+  margin: 2% 0;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  height: 30px;
+}
+button {
+  width: 100px;
+  height: 35px;
+  background-color: var(--rosa);
+  color: var(--branco);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2%;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: var(--branco);
+  color: var(--rosa);
+  border: 2px solid var(--rosa);
+}
+
+/* SOBRE */
+.texto_sobre {
+  text-align: center;
+}
+/* Galeria de Imagens */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* CONTACTOS */
+.iframe_contactos {
+  text-align: center;
+}
+.texto_contactos {
+  display: flex;
+  justify-content: center;
+  margin: 2% auto;
+}
+.texto_contactos ul {
+  list-style-type: none;
+}
+.texto_contactos a {
+  text-decoration: none;
+  color: var(--preto);
+  transition: 0.2s ease;
+}
+.texto_contactos a:hover {
+  color: var(--rosa);
+}
