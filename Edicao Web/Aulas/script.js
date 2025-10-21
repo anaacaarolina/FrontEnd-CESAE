@@ -109,25 +109,26 @@
 
 // console.log(airplaneSeats);
 
-let product = { nome: "Camisola", inStock: true, Price: 1.99, Colors: ["vermelho", "azul", "verde"] };
+// let product = { nome: "Camisola", inStock: true, Price: 1.99, Colors: ["vermelho", "azul", "verde"] };
 
-console.log(product["Price"]);
-console.log(product.Colors[2]);
+// console.log(product["Price"]);
+// console.log(product.Colors[2]);
 
-product.Price = 2.55;
+// product.Price = 2.55;
 
-console.log(product.Price);
+// console.log(product.Price);
 
-for (i = 0; i < 26; i++) {
-  console.log("I Know");
-}
-for (i = 25; i >= 1; i -= 5) {
-  console.log(i);
-}
+// for (i = 0; i < 26; i++) {
+//   console.log(i + 1 + " I Know");
+// }
+// for (i = 25; i >= 1; i -= 5) {
+//   console.log(i);
+// }
 
 // const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"];
-// let peopleMaiuscula = people.map((nome) => nome.toUpperCase());
-// console.log(peopleMaiuscula);
+// for (const pessoas of people) {
+//   console.log(pessoas.toUpperCase());
+// }
 
 // const listaCompras = [];
 // let promptProduto = "";
@@ -140,3 +141,54 @@ for (i = 25; i >= 1; i -= 5) {
 // if (listaCompras.length !== 0) {
 //   console.log("Lista de compras: " + listaCompras);
 // }
+
+function printHeart() {
+  console.log("<3");
+}
+function rant(message) {
+  for (i = 0; i < 3; i++) {
+    console.log(message.toUpperCase());
+  }
+}
+function isSnakeEyes(num1, num2) {
+  while (true) {
+    num1 = prompt("Introduza um número: ");
+    num2 = prompt("Introduza outro número: ");
+    if (num1 == 1 && num2 == 1) {
+      console.log("Yay, snake eyes");
+      break;
+    } else {
+      console.log("Não são olhos de cobra");
+    }
+  }
+}
+
+const fullNames = [
+  { first: "Albus", last: "Dumbledore" },
+  { first: "Harry", last: "Potter" },
+  { first: "Hermione", last: "Granger" },
+  { first: "Ron", last: "Weasley" },
+  { first: "Rubeus", last: "Hagrid" },
+  { first: "Minerva", last: "McGonagall" },
+  { first: "Severus", last: "Snape" },
+];
+
+const firstNames = [];
+for (const fullName of fullNames) {
+  firstNames.push(fullName.first);
+}
+console.log(firstNames);
+
+const lastNames = fullNames.map(function (f) {
+  return f.last.toUpperCase();
+});
+console.log(lastNames);
+
+const greet = (nome) => {
+  console.log(`Olá ${nome}!`);
+};
+
+const soma = (x, y) => {
+  return x + y;
+};
+console.log(soma(5, 5));
