@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -11,18 +11,24 @@ import objetivos from "./data/objetivos.js";
 import courseGoal from "./data/courseGoal.js";
 import Botao from "./components/botao.jsx";
 import Login from "./components/Login.jsx";
+import Discount from "./components/Discount.jsx";
+import ReactSubject from "./components/ReactSubject.jsx";
 
 <img src={reactLogo} className="logo react" />;
 
 function App() {
-  let chosenSubject = "Escolha a matéria: ";
-
   function alertHeySubmit() {
     alert("Atenção! Ainda falta documento para pagamento!");
   }
+  // variáveis sem estado
+  // let chosenSubject = "Escolha a matéria: ";
+
+  // estados do react -> useState
+  const [chosenSubject, setChosenSubject] = useState("Escolha a matéria: ");
+
   function getSubject(subject) {
     alert("Matéria completa de " + subject);
-    chosenSubject = subject;
+    setChosenSubject("a matéria é " + subject);
   }
 
   return (
@@ -55,6 +61,8 @@ function App() {
         <div>{chosenSubject}</div>
       </menu>
       <Login />
+      <Discount />
+      <ReactSubject />
     </>
   );
 }

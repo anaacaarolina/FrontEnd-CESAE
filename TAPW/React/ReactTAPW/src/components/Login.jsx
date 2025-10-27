@@ -1,17 +1,15 @@
 import Botao from "./botao";
-import userData from "../data/userData.js";
-import "./auth.css";
+import "./login.css";
 
 export default function Login() {
-  function doLogin(event) {
-    event.preventDefault();
-    console.log(userData.firstName);
+  function doLogin(nome) {
+    console.log("Olá " + nome);
   }
 
   return (
-    <form>
-      <h2>Login</h2>
-      <div className="control-row">
+    <div className="login">
+      <form>
+        <h2>Login</h2>
         <div className="control no-margin">
           <label htmlFor="email">Email</label>
           <input></input>
@@ -20,10 +18,10 @@ export default function Login() {
           <label htmlFor="password">Password</label>
           <input id="password" type="password" name="password"></input>
         </div>
-      </div>
+      </form>
       <p className="form-actions">
-        <Botao aoClicar={doLogin}>Login</Botao>
+        <Botao aoClicar={() => doLogin("Carolina")}>Login</Botao>
       </p>
-    </form>
+    </div>
   );
 }
