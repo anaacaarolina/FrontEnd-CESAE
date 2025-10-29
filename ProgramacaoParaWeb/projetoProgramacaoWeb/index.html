@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Heartside Recipes</title>
+    <link rel="icon" type="image.svg+xml" href="assets/icon_tab.svg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-    ´
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -20,23 +19,23 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="pages/about.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="pages/recipes.html">Recipes</a>
               </li>
             </ul>
           </div>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="index.html"><img alt="" class="navbar_icon" stroke="#424b54" src="assets/icon_navbar.svg" /></a>
           </div>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="pages/contacts.html">Contacts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Disabled</a>
+                <a class="nav-link" href="pages/login.html">Login</a>
               </li>
             </ul>
           </div>
@@ -49,83 +48,87 @@
           <div class="row">
             <div class="col-md-2 d-flex justify-content-center justify-content-md-center align-items-center d-non d-lg-flex"></div>
             <div class="col-md-4 d-flex justify-content-center justify-content-md-center align-items-center d-non d-lg-flex">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia, in quasi reprehenderit nam nihil earum veritatis, neque dolores beatae eveniet! Aperiam perspiciatis earum labore asperiores fugit temporibus beatae porro.</p>
+              <div class="intro_text">
+                <h1>Heartside Recipes</h1>
+                <p>Cooking is my way of sharing a little warmth with the world. In every recipe there’s a story, a memory, a pinch of chaos and a whole lot of love. Take a seat at the table, breathe in the good smells, and let’s create something delicious together.</p>
+              </div>
             </div>
-            <div class="col-md-4 d-flex justify-content-center justify-content-md-center align-items-center d-non d-lg-flex"><img src="assets/cinzento.png" id="img_intro" /></div>
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-center align-items-center d-non d-lg-flex"><img src="assets/cozinha.jpg" id="img_intro" /></div>
+            <div class="col-md-2 d-flex justify-content-center justify-content-md-center align-items-center d-non d-lg-flex"></div>
           </div>
-          <div class="col-md-2 d-flex justify-content-center justify-content-md-center align-items-center d-non d-lg-flex"></div>
         </div>
       </section>
-      <section class="cards_receitas">
-        <div class="cards_row">
-          <div class="cards_column">
-            <div class="card">
-              <h2>Tailored Jeans</h2>
-              <img src="assets/massa.jpg" alt="Denim Jeans" style="width: 100%" />
-              <p>Some text about the jeans..</p>
-              <p><button>Ver Receita</button></p>
+      <section class="recipe_cards">
+        <h2 class="recipe_cards_title">Most Recent Recipes</h2>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-center align-items-center d-non d-lg-flex">
+              <div class="card" style="width: 18rem">
+                <img src="assets/bowl/Chicken_Bowl.webp" class="card-img-top" alt="Sticky Chicken Bowl" />
+                <div class="card-body">
+                  <h5 class="card-title">Sticky Chicken Bowl</h5>
+                  <p class="card-text">These Sticky Chicken Bowls combine tender, well-seasoned chicken with a glossy, garlicky glaze that clings beautifully to every bite.</p>
+                  <a href="pages/recipes/bowl.html" class="btn botao">See recipe</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-center align-items-center d-non d-lg-flex">
+              <div class="card" style="width: 18rem">
+                <img src="assets/muffins/Cream-Cheese-Muffins.webp" class="card-img-top" alt="Cream Cheese Muffins" />
+                <div class="card-body">
+                  <h5 class="card-title">Cream Cheese Muffins</h5>
+                  <p class="card-text">Soft and buttery with a gentle tang from the cream cheese center, these muffins strike a delicious balance between dessert and breakfast.</p>
+                  <a href="pages/recipes/muffin.html" class="btn botao">See recipe</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-center align-items-center d-non d-lg-flex">
+              <div class="card" style="width: 18rem">
+                <img src="assets/tortellini/Pumpkin-Tortellini.webp" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Pumpkin Tortellini</h5>
+                  <p class="card-text">This recipe calls for pumpkin puree and some warm spices. I used cinnamon, allspice, cane syrup, and some grated parmesan cheese for my filling.</p>
+                  <a href="pages/recipes/tortellini.html" class="btn botao">See recipe</a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="cards_column">
-            <div class="card">
-              <h2>Tailored Jeans</h2>
-              <img src="assets/cinzento.png" alt="Denim Jeans" style="width: 100%" />
-              <p>Some text about the jeans..</p>
-              <p><button>Ver Receita</button></p>
-            </div>
-          </div>
-          <div class="cards_column">
-            <div class="card">
-              <h2>Tailored Jeans</h2>
-              <img src="assets/massa.jpg" alt="Denim Jeans" style="width: 100%" />
-              <p>Some text about the jeans..</p>
-              <p><button>Ver Receita</button></p>
-            </div>
-          </div>
-          <div class="cards_column">
-            <div class="card">
-              <h2>Tailored Jeans</h2>
-              <img src="assets/cinzento.png" alt="Denim Jeans" style="width: 100%" />
-              <p>Some text about the jeans..</p>
-              <p><button>Ver Receita</button></p>
-            </div>
-          </div>
+        </div>
+        <div class="container_recipe_cards_button">
+          <a class="recipe_cards_button" href="pages/recipes.html">See all recipes</a>
         </div>
       </section>
     </main>
 
     <footer>
+      <hr />
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6">
-            <form action="action_page.php">
-              <div class="container">
-                <h2>Subscribe to our Newsletter</h2>
-                <p>Lorem ipsum..</p>
-              </div>
-
-              <div class="container" style="background-color: white">
-                <input type="text" placeholder="Name" name="name" required />
-                <input type="text" placeholder="Email address" name="mail" required />
-                <label> <input type="checkbox" checked="checked" name="subscribe" /> Daily Newsletter </label>
-              </div>
-
-              <div class="container">
-                <input type="submit" value="Subscribe" />
-              </div>
+          <div class="col-md-4">
+            <form class="form_footer">
+              <h4>Subscribe to our Newsletter</h4>
+              <input type="text" placeholder="Nome" name="name" required />
+              <input type="text" placeholder="Email address" name="mail" required />
+              <label class="container_checkmark_footer"
+                >Daily Newsletter
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark_footer"></span>
+              </label>
+              <button type="submit" value="Subscribe">Subscribe</button>
             </form>
           </div>
-          <div class="col-md-3">
-            <p>Rua da morada, nº<br />cidade da morada<br />Portugal</p>
-            <br />
-            <p><a href="tel:+351123456789">(+351) 123 456 789</a></p>
-            <br />
+          <div class="col-md-4 footer_middle">
+            <p>Rua de Fundões 151, 3700-121</p>
+            <p>São João da Madeira</p>
+            <p>Portugal</p>
+            <p><a href="tel:+351123456789">(+351) 987 654 321</a></p>
             <p><a href="mailto:email@email.pt">email@email.pt</a></p>
           </div>
-          <div class="col-md-3">
-            <p><a href="#" class="fa fa-facebook"> Facebook</a></p>
-            <p><a href="#" class="fa fa-instagram"> Instagram</a></p>
-            <p><a href="#" class="fa fa-twitter"> Twitterr</a></p>
+          <div class="col-md-4 footer_right">
+            <a href="https://www.facebook.com" target="_blank"><img src="assets/facebook.svg" class="social_media_icons" /></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="assets/instagram.svg" class="social_media_icons" /></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="assets/youtube.svg" class="social_media_icons" /></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="assets/linkedin.svg" class="social_media_icons" /></a>
           </div>
         </div>
       </div>
