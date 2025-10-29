@@ -4,3 +4,6 @@ button {
   margin: 15px;
   border: aquamarine 1px solid;
 }
+.active {
+  background-color: mediumslateblue;
+}

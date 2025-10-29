@@ -13,6 +13,7 @@ import Botao from "./components/botao.jsx";
 import Login from "./components/Login.jsx";
 import Discount from "./components/Discount.jsx";
 import ReactSubject from "./components/ReactSubject.jsx";
+import Delete from "./components/Delete.jsx";
 
 <img src={reactLogo} className="logo react" />;
 
@@ -63,6 +64,7 @@ function App() {
       <Login />
       <Discount />
       <ReactSubject />
+      <Delete />
     </>
   );
 }
