@@ -11,6 +11,7 @@
   --beige: #edd7bf;
   --light-beige: #fff4e9;
 }
+
 /* ============ */
 /* GENERAL */
 /* ============ */
@@ -55,6 +56,7 @@ h5 {
 a {
   text-decoration: none;
 }
+
 /* ============ */
 /* NAVBAR */
 /* ============ */
@@ -111,9 +113,9 @@ a {
   margin-top: 5%;
   margin-bottom: 5%;
 }
-#img_intro {
+#video_intro {
   width: 70%;
-  max-height: 400px;
+  max-height: 500px;
   border-top-left-radius: 150px;
   border-top-right-radius: 150px;
 }
@@ -121,6 +123,19 @@ a {
   #img_intro {
     width: 50%;
   }
+}
+.caption {
+  font-size: 14px !important;
+}
+.link_caption {
+  text-decoration: none;
+  color: var(--purple);
+  transition: 0.2s ease;
+}
+.link_caption:hover {
+  color: var(--dark-purple);
+  text-decoration: underline;
+  transition: 0.2s ease;
 }
 .intro p {
   color: var(--grey);
@@ -239,10 +254,37 @@ a {
   margin-top: 3%;
   text-align: center;
 }
+
+/* ============ */
+/* ABOUT */
+/* ============ */
+.title_about {
+  text-align: center;
+}
+.about-link {
+  text-decoration: none;
+  color: var(--purple);
+  transition: 0.2s ease;
+}
+.about-link:hover {
+  color: var(--dark-purple);
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+
 /* ============ */
 /* RECIPE */
 /* ============ */
-
+.recipe_image_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+.recipe_image {
+  max-width: 450px;
+  border-radius: 10px;
+}
 .recipe_info {
   border: 1px solid var(--pink);
   width: 100%;
@@ -286,6 +328,174 @@ a {
 .carousel-inner {
   max-width: 400px;
 }
+
+/* ============ */
+/* CONTACTS */
+/* ============ */
+.contact-card {
+  color: var(--grey);
+  box-shadow: 0 4px 8px 0 rgba(80, 70, 10, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: var(--beige);
+  align-items: center;
+  transition: 0.3s ease;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 10px;
+  min-height: 70vh;
+}
+.contact-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100%;
+}
+.contact-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  height: auto;
+}
+.contact-card h4 {
+  font-family: "Josefin Slab", serif;
+  color: var(--grey);
+  font-size: 2rem;
+}
+.contact-card label {
+  font-family: Geologica, sans-serif;
+  color: var(--grey);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.contact-card-logo {
+  width: 100px;
+}
+#contact-name,
+#contact-email,
+#contact-subject,
+#contact-message {
+  font-size: 15px;
+  background-color: var(--off-white);
+  border: 1px solid var(--pink);
+}
+#contact-name:focus,
+#contact-email:focus,
+#contact-subject:focus,
+#contact-message:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 10px var(--purple);
+}
+.contact-button {
+  width: 50%;
+  font-family: Geologica, sans-serif;
+  font-size: 17px;
+  text-align: center;
+  color: var(--gray);
+  background-color: var(--pink);
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.contact-button:hover {
+  background-color: var(--purple);
+  color: var(--off-white);
+  transition: 0.2s ease;
+}
+.contact-button:active {
+  background-color: var(--dark-purple);
+}
+
+/* ============ */
+/* LOGIN */
+/* ============ */
+.login-card {
+  color: var(--grey);
+  box-shadow: 0 4px 8px 0 rgba(80, 70, 10, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: var(--beige);
+  align-items: center;
+  transition: 0.3s ease;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 10px;
+}
+.login-card h4 {
+  font-family: "Josefin Slab", serif;
+  color: var(--grey);
+  font-size: 2rem;
+}
+.login-card img {
+  max-width: 80%;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3%;
+}
+.login-card label {
+  font-family: Geologica, sans-serif;
+  color: var(--grey);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.login-card-logo {
+  width: 100px;
+}
+#login-email,
+#login-password {
+  background-color: var(--off-white);
+  border: 1px solid var(--pink);
+}
+#login-email:focus,
+#login-password:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 10px var(--purple);
+}
+.login-button {
+  width: 50%;
+  font-family: Geologica, sans-serif;
+  font-size: 17px;
+  text-align: center;
+  color: var(--gray);
+  background-color: var(--pink);
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.login-button:hover {
+  background-color: var(--purple);
+  color: var(--off-white);
+  transition: 0.2s ease;
+}
+.login-button:active {
+  background-color: var(--dark-purple);
+}
+.login-forgot-password {
+  font-size: 14px;
+}
+.login-forgot-password,
+.login-register-link {
+  color: var(--dark-purple);
+  transition: 0.2s ease;
+}
+.login-forgot-password:hover,
+.login-register-link:hover {
+  text-decoration: underline;
+  color: var(--purple);
+  transition: 0.2s ease;
+}
+
 /* ============ */
 /* FOOTER */
 /* ============ */

@@ -42,7 +42,49 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="contacts">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+              <div class="contact-card">
+                <div class="row g-0">
+                  <div class="col-md-6 col-lg-5 d-none d-md-flex">
+                    <img src="../assets/icon_contact.svg" alt="contact form" class="contact-image" />
+                  </div>
+                  <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                    <div class="card-body p-4 text-black">
+                      <form>
+                        <h4 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px"><strong>Send us a message</strong></h4>
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <label class="form-label" for="contact-name">Name</label>
+                          <input type="text" id="contact-name" class="form-control form-control-lg" />
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <label class="form-label" for="contact-email">Email address</label>
+                          <input type="email" id="contact-email" class="form-control form-control-lg" />
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <label class="form-label" for="contact-subject">Subject</label>
+                          <input type="text" id="contact-subject" class="form-control form-control-lg" />
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <label class="form-label" for="contact-message">Message</label>
+                          <textarea id="contact-message" class="form-control form-control-lg"></textarea>
+                        </div>
+                        <div class="pt-1 mb-4">
+                          <button data-mdb-button-init data-mdb-ripple-init class="contact-button" type="button">Submit</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
       <hr />
       <div class="container-fluid">
