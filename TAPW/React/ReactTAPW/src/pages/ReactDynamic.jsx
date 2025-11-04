@@ -1,0 +1,27 @@
+import { Link } from "react-router-dom";
+import Botao from "../components/botao";
+import ReactSubject from "../components/ReactSubject";
+import { useState } from "react";
+
+export default function ReactDynamic() {
+  const [chosenSubject, setChosenSubject] = useState("Escolha a matéria: ");
+
+  function getSubject(subject) {
+    alert("Matéria completa de " + subject);
+    setChosenSubject("a matéria é " + subject);
+  }
+
+  return (
+    <div>
+      <h3>Eventos Dinâmicos</h3>
+      <Link to="/">Home</Link>
+      <menu>
+        <Botao aoClicar={() => getSubject("JS")}>Matéria JS</Botao>
+        <Botao aoClicar={() => getSubject("React")}>Matéria React</Botao>
+        <Botao aoClicar={() => getSubject("SQL")}>Matéria SQL</Botao>
+        <div>{chosenSubject}</div>
+      </menu>
+      <ReactSubject />{" "}
+    </div>
+  );
+}
