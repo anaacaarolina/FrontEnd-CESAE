@@ -1,7 +1,7 @@
-function hello() {
-  alert("cucu");
-}
-let myName = null;
+// function hello() {
+//   alert("cucu");
+// }
+// let myName = null;
 
 // if (myName) {
 //   myName = myName;
@@ -10,8 +10,13 @@ let myName = null;
 // }
 
 // TERNARIO
-myName = myName ? myName : "user";
+// myName = myName ? myName : "user";
 
-function helloUser() {
-  alert("Olá, " + myName + "!");
-}
+// function helloUser() {
+//   alert("Olá, " + myName + "!");
+// }
+
+const animals = ["Cão", "Gato", "Javali", "Chinchila"];
+
+//Função map
+const animalsUpper = animals.map((item) => item.toUpperCase());

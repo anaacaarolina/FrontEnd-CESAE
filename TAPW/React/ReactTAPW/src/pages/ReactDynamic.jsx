@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Botao from "../components/botao";
 import ReactSubject from "../components/ReactSubject";
 import { useState } from "react";
@@ -14,7 +13,6 @@ export default function ReactDynamic() {
   return (
     <div>
       <h3>Eventos Dinâmicos</h3>
-      <Link to="/">Home</Link>
       <menu>
         <Botao aoClicar={() => getSubject("JS")}>Matéria JS</Botao>
         <Botao aoClicar={() => getSubject("React")}>Matéria React</Botao>

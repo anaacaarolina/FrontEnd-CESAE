@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import FirstComponent from "../components/FirstComponent";
 import CourseGoal from "../components/CourseGoal";
 import courseGoal from "../data/courseGoal.js";
@@ -16,7 +15,6 @@ export default function Others() {
   return (
     <div>
       <h2>Página com o resto</h2>
-      <Link to="/">Home</Link>
       <FirstComponent />
       <h1>Front End Developer: React</h1>
       <CourseGoal {...courseGoal} />
