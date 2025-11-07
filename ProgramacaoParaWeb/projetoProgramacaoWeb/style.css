@@ -119,6 +119,10 @@ a {
   border-top-left-radius: 150px;
   border-top-right-radius: 150px;
 }
+.intro_video_caption {
+  text-align: center;
+  margin-top: 5px;
+}
 @media (max-width: 768px) {
   #img_intro {
     width: 50%;
@@ -159,6 +163,7 @@ a {
   margin-top: 2%;
   margin-bottom: 2%;
 }
+
 .card-text {
   text-align: left;
 }
@@ -187,7 +192,7 @@ a {
   font-family: Geologica, sans-serif;
   font-size: 15px;
   text-align: center;
-  color: var(--gray);
+  color: var(--grey);
   background-color: var(--pink);
   border: none;
   border-radius: 8px;
@@ -215,13 +220,18 @@ a {
     margin-top: 5%;
   }
 }
+@media (max-width: 500px) {
+  .container_recipe_cards_button {
+    margin-top: 10%;
+  }
+}
 .recipe_cards_button {
   margin-top: 5%;
   text-decoration: none;
   font-family: Geologica, sans-serif;
   font-size: 18px;
   text-align: center;
-  color: var(--gray);
+  color: var(--grey);
   background-color: var(--pink);
   border: none;
   border-radius: 8px;
@@ -380,6 +390,7 @@ a {
   font-size: 15px;
   background-color: var(--off-white);
   border: 1px solid var(--pink);
+  color: var(--grey);
 }
 #contact-name:focus,
 #contact-email:focus,
@@ -394,7 +405,7 @@ a {
   font-family: Geologica, sans-serif;
   font-size: 17px;
   text-align: center;
-  color: var(--gray);
+  color: var(--grey);
   background-color: var(--pink);
   border: none;
   border-radius: 8px;
@@ -452,6 +463,7 @@ a {
 #login-password {
   background-color: var(--off-white);
   border: 1px solid var(--pink);
+  color: var(--grey);
 }
 #login-email:focus,
 #login-password:focus {
@@ -464,7 +476,7 @@ a {
   font-family: Geologica, sans-serif;
   font-size: 17px;
   text-align: center;
-  color: var(--gray);
+  color: var(--grey);
   background-color: var(--pink);
   border: none;
   border-radius: 8px;
@@ -484,6 +496,9 @@ a {
 .login-forgot-password {
   font-size: 14px;
 }
+.login-register {
+  color: var(--grey);
+}
 .login-forgot-password,
 .login-register-link {
   color: var(--dark-purple);
@@ -500,10 +515,21 @@ a {
 /* FOOTER */
 /* ============ */
 hr {
-  margin-top: 5%;
+  margin-top: 3%;
   border-top: 3px solid var(--purple);
   border-radius: 5px;
 }
+@media (max-width: 870px) {
+  hr {
+    margin-top: 5%;
+  }
+}
+@media (max-width: 500px) {
+  hr {
+    margin-top: 10%;
+  }
+}
+
 footer {
   margin-bottom: 3%;
 }
@@ -588,7 +614,7 @@ footer {
   font-family: Geologica, sans-serif;
   font-size: 15px;
   text-align: center;
-  color: var(--gray);
+  color: var(--grey);
   background-color: var(--pink);
   border: none;
   border-radius: 8px;
