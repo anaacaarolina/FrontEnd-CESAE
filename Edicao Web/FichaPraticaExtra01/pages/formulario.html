@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/svg" href="../assets/icon_tab.svg" />
+
+    <script src="../js/calculadora.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="back_home">
+      <a href="../index.html">Go back</a>
+    </div>
+    <div class="enunciado">
+      <h3>Validação de Formulário</h3>
+      <p><b>Obrjetivo</b>: Criar um formulário HTML que valide os campos usando JavaScript</p>
+      <ul>
+        <li>Campos: Nome, Email e Senha</li>
+        <li>Requisitos: Nome (com pelo menos 3 caracteres), Email válido e Senho com pelo menos 8 caracteres.</li>
+      </ul>
+      <p><b>Dica</b>: Use eventos como onsubmit para disparar as validações</p>
+    </div>
+    <div class="formulario">
+      <form>
+        <label for="name">Nome: </label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

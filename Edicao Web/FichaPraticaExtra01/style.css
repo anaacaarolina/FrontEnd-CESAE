@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav,
+.back_home {
+  padding: 20px 0;
+  background-color: #f4f4f4;
+}
+nav ul,
+.back_home {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav a,
+.back_home a {
+  text-decoration: none;
+  margin: 0 15px;
+  color: rgb(50, 30, 70);
+  transition: 0.2s ease;
+}
+nav a:hover,
+.back_home a:hover {
+  color: rgb(196, 132, 255);
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+
+main {
+  margin: 20px;
+}
+main a {
+  background-color: rgb(230, 203, 255);
+  color: rgb(50, 30, 70);
+  text-decoration: none;
+  margin: 30px 0 !important;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid rgb(196, 132, 255);
+  transition: 0.2s ease;
+}
+main h3 {
+  margin: 20px 0;
+}
+
+main a:hover {
+  background-color: rgb(211, 163, 255);
+}
+main a:active {
+  background-color: rgb(201, 144, 255);
+}
+
+.enunciado {
+  margin-top: 2% !important;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.code {
+  color: green;
+  background-color: black;
+}
+.section_calculadora {
+  margin: 2% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculadora {
+  max-width: 400px;
+  background-color: rgb(255, 245, 247);
+}
+#display {
+  width: 100%;
+  max-width: 393px;
+  height: 75px;
+  border-radius: 10px;
+  background-color: rgb(244, 233, 253);
+  border: 1px solid rgb(222, 188, 253);
+  color: rgb(50, 30, 69);
+  font-size: xx-large;
+}
+.fila_um,
+.fila_dois,
+.fila_tres,
+.fila_quatro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+button {
+  width: 95px;
+  height: 75px;
+  border-radius: 10px !important;
+  margin: 2px !important;
+  font-size: large;
+  font-weight: bold;
+  background-color: rgb(230, 203, 255);
+  border: 1px solid rgb(196, 132, 255);
+  color: rgb(50, 30, 70);
+  transition: 0.2s ease;
+}
+button:hover {
+  background-color: rgb(211, 163, 255);
+}
+button:active {
+  background-color: rgb(201, 144, 255);
+}
+@media screen and (max-width: 500px) {
+  .calculadora {
+    max-width: 95%;
+  }
+  #display {
+    max-width: 100%;
+  }
+  button {
+    width: 22%;
+    height: 60px;
+    font-size: medium;
+  }
+}
