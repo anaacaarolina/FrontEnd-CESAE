@@ -1,6 +1,7 @@
 import Botao from "../components/botao";
 import ReactSubject from "../components/ReactSubject";
 import { useState } from "react";
+import ShoppingList from "../components/ShoppingList";
 
 export default function ReactDynamic() {
   const [chosenSubject, setChosenSubject] = useState("Escolha a matéria: ");
@@ -19,7 +20,8 @@ export default function ReactDynamic() {
         <Botao aoClicar={() => getSubject("SQL")}>Matéria SQL</Botao>
         <div>{chosenSubject}</div>
       </menu>
-      <ReactSubject />{" "}
+      <ReactSubject />
+      <ShoppingList />
     </div>
   );
 }

@@ -9,6 +9,7 @@ export default function HomePage() {
       <Link to="/others">Others</Link>
       <br />
       <Link to="/eventos-dinamicos">Eventos Dinâmicos</Link>
+      <br />
     </div>
   );
 }
