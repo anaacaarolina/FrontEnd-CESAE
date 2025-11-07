@@ -8,6 +8,7 @@ import ReactDynamic from "./pages/ReactDynamic.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Courses from "./pages/Courses.jsx";
 import Course from "./pages/Course.jsx";
+import PrendasPage from "./pages/PrendasPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: "/eventos-dinamicos", element: <ReactDynamic /> },
       { path: "/cursos", element: <Courses /> },
       { path: "/curso/:nome_do_curso", element: <Course /> },
+      { path: "/prendas", element: <PrendasPage /> },
     ],
   },
 ]);

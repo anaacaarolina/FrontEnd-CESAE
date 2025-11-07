@@ -7,12 +7,16 @@ body {
 a {
   text-decoration: none;
   color: rgb(84, 19, 67);
+  transition: 0.2s;
 }
 a:hover {
   color: rgb(184, 36, 144);
+  transition: 0.2s;
 }
 nav {
-  background-color: pink;
+  font-size: 18px;
+  background-color: rgb(255, 229, 233);
+  padding: 2em;
 }
 .logo {
   height: 3em;
@@ -20,11 +24,28 @@ nav {
   will-change: filter;
   transition: filter 300ms;
 }
+.lista_prendas {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.lista_prendas ul {
+  list-style-type: none;
+  line-height: 1.8rem;
+}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.pai_natal {
+  max-width: 150px;
+  margin: 2rem 0;
+}
+
+footer {
+  margin-top: 2rem;
+  background-color: rgb(255, 229, 233);
 }
 
 @keyframes logo-spin {
