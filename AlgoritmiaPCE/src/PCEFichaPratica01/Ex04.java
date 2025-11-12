@@ -17,7 +17,6 @@ public class Ex04 {
             }
         }
 
-        System.out.println("O maior número é: " + menorNumero);
-        System.out.println(Arrays.toString(numero));
+        System.out.println("O menor número é: " + menorNumero);
     }
 }

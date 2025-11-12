@@ -1,21 +1,22 @@
 package PCEFichaPratica01;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex03 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int[] comissoes = new int[12];
-        int totalComissoes = 0;
-        String[] meses = new String[]{"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+        int[] numero = new int[10];
+        int maiorNumero = -9999999;
 
-        for (int i = 0; i < comissoes.length; ++i) {
-            System.out.print("Insira o valor das comissões do mês de " + meses[i] + ": ");
-            comissoes[i] = input.nextInt();
-            totalComissoes += comissoes[i];
+        for(int i = 0; i < numero.length; ++i) {
+            System.out.print("Insira um número: ");
+            numero[i] = input.nextInt();
+            if (numero[i] >= maiorNumero) {
+                maiorNumero = numero[i];
+            }
         }
 
-        System.out.println(totalComissoes);
+        System.out.println("O maior número é: " + maiorNumero);
     }
-
 }
