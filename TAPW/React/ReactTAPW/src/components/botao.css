@@ -4,7 +4,7 @@ button {
   margin: 15px;
   border: 1px rgb(188, 109, 225) solid;
   padding: 0.5rem;
-  width: 120px;
+  /* width: 120px; */
   text-align: center;
   cursor: pointer;
   border-radius: 8px;

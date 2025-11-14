@@ -9,6 +9,9 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import Courses from "./pages/Courses.jsx";
 import Course from "./pages/Course.jsx";
 import PrendasPage from "./pages/PrendasPage.jsx";
+import AvailablePlaces from "./pages/PlacesIndex.jsx";
+import StarWarsPeople from "./pages/StarWarsPeople.jsx";
+import StarWarsFilms from "./pages/StarWarsFilms.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,9 @@ const router = createBrowserRouter([
       { path: "/cursos", element: <Courses /> },
       { path: "/curso/:nome_do_curso", element: <Course /> },
       { path: "/prendas", element: <PrendasPage /> },
+      { path: "/places", element: <AvailablePlaces /> },
+      { path: "/star-wars-people", element: <StarWarsPeople /> },
+      { path: "/star-wars-films", element: <StarWarsFilms /> },
     ],
   },
 ]);
