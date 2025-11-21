@@ -12,6 +12,7 @@ import PrendasPage from "./pages/PrendasPage.jsx";
 import AvailablePlaces from "./pages/PlacesIndex.jsx";
 import StarWarsPeople from "./pages/StarWarsPeople.jsx";
 import StarWarsFilms from "./pages/StarWarsFilms.jsx";
+import Signup from "./pages/Signup.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: "/places", element: <AvailablePlaces /> },
       { path: "/star-wars-people", element: <StarWarsPeople /> },
       { path: "/star-wars-films", element: <StarWarsFilms /> },
+      { path: "/register", element: <Signup /> },
     ],
   },
 ]);

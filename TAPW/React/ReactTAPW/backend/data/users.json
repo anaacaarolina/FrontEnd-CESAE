@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "email": "carolinaop.co2003@gmail.com",
+    "password": "aaa",
+    "firstName": "Ana",
+    "lastName": "Pinto",
+    "role": "student",
+    "termsAccepted": true
+  },
+  {
+    "email": "aaa@email.com",
+    "password": "aaa",
+    "firstName": "aaa",
+    "lastName": "aaa",
+    "role": "teacher",
+    "termsAccepted": true
+  },
+  {
+    "email": "bbb@email.com",
+    "password": "bbb",
+    "firstName": "bbb",
+    "lastName": "bbb",
+    "role": "employee",
+    "termsAccepted": true
+  },
+  {
+    "email": "ccc@ccc.com",
+    "password": "ccc",
+    "firstName": "ccc",
+    "lastName": "ccc",
+    "role": "other",
+    "termsAccepted": true
+  },
+  {
+    "email": "ddd@ddd.com",
+    "password": "ddd",
+    "firstName": "ddd",
+    "lastName": "ddd",
+    "role": "student",
+    "termsAccepted": true
+  }
+]

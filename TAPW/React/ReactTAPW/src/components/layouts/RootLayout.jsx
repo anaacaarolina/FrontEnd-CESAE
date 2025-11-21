@@ -8,7 +8,7 @@ export default function RootLayout() {
     <>
       <div className="navegacao">
         <nav>
-          <Link to="/">Home</Link> | <Link to="/contactos">Contactos</Link> | <Link to="/others">Others</Link> | <Link to="/eventos-dinamicos">Eventos Dinâmicos</Link> | <Link to="/cursos">Cursos</Link> | <Link to="/prendas">Lista de Prendas</Link> | <Link to="/places">Places</Link> | <Link to="/star-wars-people">Star Wars People</Link> | <Link to="/star-wars-films">Star Wars Films</Link>{" "}
+          <Link to="/">Home</Link> | <Link to="/contactos">Contactos</Link> | <Link to="/others">Others</Link> | <Link to="/eventos-dinamicos">Eventos Dinâmicos</Link> | <Link to="/cursos">Cursos</Link> | <Link to="/prendas">Lista de Prendas</Link> | <Link to="/places">Places</Link> | <Link to="/star-wars-people">Star Wars People</Link> | <Link to="/star-wars-films">Star Wars Films</Link> | <Link to="/register">Registar</Link>{" "}
         </nav>
       </div>
 

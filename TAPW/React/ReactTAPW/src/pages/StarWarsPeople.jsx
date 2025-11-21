@@ -22,7 +22,7 @@ export default function StarWarsPeople() {
       {(people && people.length) > 0 && (
         <ul className="places">
           {people.map((item) => (
-            <li key={item.id} className="place-item">
+            <li key={item.name} className="place-item">
               <p>
                 <b>{item.name}: </b>
                 {item.birth_year}, {item.gender}

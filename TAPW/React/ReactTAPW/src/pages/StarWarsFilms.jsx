@@ -22,7 +22,7 @@ export default function StarWarsFilms() {
       {(films && films.length) > 0 && (
         <ul className="places">
           {films.map((item) => (
-            <li key={item.id} className="place-item">
+            <li key={item.title} className="place-item">
               <p>
                 <b>{item.title} </b>
               </p>
