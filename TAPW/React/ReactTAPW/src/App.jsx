@@ -13,6 +13,9 @@ import AvailablePlaces from "./pages/PlacesIndex.jsx";
 import StarWarsPeople from "./pages/StarWarsPeople.jsx";
 import StarWarsFilms from "./pages/StarWarsFilms.jsx";
 import Signup from "./pages/Signup.jsx";
+import { AuthProvider } from "./contexts/AuthContext.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
+import RouteForStudents from "./protectedRoutes/RouteForStudents.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,13 +27,14 @@ const router = createBrowserRouter([
       { path: "/contactos", element: <Contactos /> },
       { path: "/others", element: <Others /> },
       { path: "/eventos-dinamicos", element: <ReactDynamic /> },
-      { path: "/cursos", element: <Courses /> },
+      { path: "/cursos", element: <RouteForStudents element={<Courses />} /> },
       { path: "/curso/:nome_do_curso", element: <Course /> },
       { path: "/prendas", element: <PrendasPage /> },
       { path: "/places", element: <AvailablePlaces /> },
       { path: "/star-wars-people", element: <StarWarsPeople /> },
       { path: "/star-wars-films", element: <StarWarsFilms /> },
       { path: "/register", element: <Signup /> },
+      { path: "/login", element: <LoginPage /> },
     ],
   },
 ]);
@@ -38,7 +42,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </>
   );
 }
