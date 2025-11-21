@@ -6,7 +6,7 @@ public class Ex05 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         double[] numero = new double[10];
-        double totalNumeros = (double)0.0F;
+        double totalNumeros = 0;
 
         for(int i = 0; i < numero.length; ++i) {
             System.out.print("Insira um valor: ");

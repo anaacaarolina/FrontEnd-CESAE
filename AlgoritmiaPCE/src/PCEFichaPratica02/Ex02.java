@@ -14,10 +14,14 @@ public class Ex02 {
 
         int num;
 
-        do {
-            System.out.print("Introduza um número: ");
-            num = input.nextInt();
-        }while (num >= 0);
+        System.out.print("Introduza um número: ");
+        num = input.nextInt();
+        if (num >0){
+            while (true){
+                System.out.print("Introduza um número: ");
+                num = input.nextInt();
+            }
+        }
 
         return num;
     }
