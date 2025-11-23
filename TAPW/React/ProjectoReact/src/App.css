@@ -1,0 +1,38 @@
+:root {
+  --off-white: #ffeedf;
+  --brown: #d08d45;
+  --dark-brown: #291704;
+  --green: #596d22;
+  --yellow: #cda813;
+  --red: #c43b3b;
+}
+
+nav.custom-navbar {
+  background-color: var(--dark-brown);
+  color: var(--off-white) !important;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.custom-navbar .navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+.custom-navbar .nav-link {
+  color: var(--off-white) !important;
+}
+.custom-navbar .nav-link:hover {
+  color: var(--brown) !important;
+}
+
+.custom-navbar .navbar-toggler {
+  border-color: var(--off-white) !important;
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffeedf' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  background-color: transparent !important;
+}
+
+.custom-navbar .navbar-toggler-icon h2 {
+  color: blue;
+}
