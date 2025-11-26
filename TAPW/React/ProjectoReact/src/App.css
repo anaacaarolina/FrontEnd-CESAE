@@ -1,21 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
 :root {
   --off-white: #ffeedf;
-  --brown: #d08d45;
+  ---light-brown: #f3b674;
+  --brown: #a85904;
   --dark-brown: #291704;
   --green: #596d22;
   --yellow: #cda813;
   --red: #c43b3b;
 }
 
+/* ====HEADER (LAYOUT MASTER)==== */
 nav.custom-navbar {
   background-color: var(--dark-brown);
   color: var(--off-white) !important;
   padding-left: 2%;
   padding-right: 2%;
+  font-family: Merriweather, serif;
 }
 .custom-navbar .navbar-nav {
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  gap: 2%;
+  white-space: nowrap;
 }
 .custom-navbar .nav-link {
   color: var(--off-white) !important;
@@ -23,16 +34,127 @@ nav.custom-navbar {
 .custom-navbar .nav-link:hover {
   color: var(--brown) !important;
 }
-
 .custom-navbar .navbar-toggler {
   border-color: var(--off-white) !important;
 }
-
 .custom-navbar .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffeedf' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
   background-color: transparent !important;
 }
+.custom-navbar img {
+  transition: 0.2s ease;
+}
+.custom-navbar img:hover {
+  filter: drop-shadow(1px 1px 5px var(--brown));
+  transition: 0.2s ease;
+}
 
-.custom-navbar .navbar-toggler-icon h2 {
-  color: blue;
+/* ====FOOTER (LAYOUT MASTER)==== */
+footer {
+  background-color: var(--dark-brown);
+  color: var(--off-white);
+}
+
+/* ====MAIN CONTENT (PAGES)==== */
+.main-content {
+  background-color: var(--off-white);
+  padding: 2%;
+  font-family: Lato, sans-serif;
+}
+.main-content h2,
+.main-content h3 {
+  font-family: Merriweather, serif;
+  font-weight: bold;
+  color: var(--brown);
+  text-align: center;
+  margin-bottom: 2%;
+}
+.hero-section {
+  width: 100%;
+  margin: 0 !important;
+  padding: 10%;
+  background-image: url("./assets/restaurant-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section h2 {
+  font-family: Merriweather, serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--brown);
+  text-align: center;
+  margin-bottom: 2%;
+}
+.hero-section p {
+  color: var(--off-white);
+  font-size: 22px;
+  text-align: center;
+}
+.cards-section {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2%;
+  margin-bottom: 2%;
+  flex-wrap: wrap;
+  padding-left: 2%;
+}
+/* ====FOOD CARD==== */
+.food-card {
+  flex: 1 1 300px;
+  max-width: 320px;
+  background-color: var(---light-brown);
+  padding: 1%;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 2%;
+}
+.food-card img {
+  max-width: 80%;
+  margin-bottom: 2%;
+}
+
+/* ====TABLETS==== */
+@media (min-width: 768px) {
+  .custom-navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    gap: 30px;
+    white-space: nowrap;
+  }
+  .hero-section {
+    padding: 10%;
+  }
+}
+/* ====PHONES==== */
+@media (max-width: 767px) {
+  .custom-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    white-space: normal;
+  }
+  .hero-section {
+    padding: 8%;
+  }
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    gap: 2%;
+  }
+  .food-card {
+    flex: none;
+    width: 90%;
+    max-width: 300px;
+  }
 }

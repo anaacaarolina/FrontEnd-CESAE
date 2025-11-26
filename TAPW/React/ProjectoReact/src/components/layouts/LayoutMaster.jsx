@@ -11,7 +11,7 @@ export default function LayoutMaster() {
         <nav className="navbar navbar-expand-lg custom-navbar">
           <div className="container-fluid">
             <Link to="/" className="navbar-brand">
-              <img src={logo} alt="Logo" width="50" height="50" className="d-inline-block align-text-top" />
+              <img src={logo} alt="Logo" width="60" height="60" className="d-inline-block align-text-top navbar-logo" />
             </Link>
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,13 +60,11 @@ export default function LayoutMaster() {
       </header>
       <Outlet />
 
-      <footer className="bg-body-tertiary text-center text-lg-start">
+      <footer className=" text-center text-lg-start">
         <div className="text-center p-3">© 2025 Copyright: Carolina Pinto</div>
         <div className="text-center p-3">
           {" "}
-          <Link to="/" className="navbar-brand">
-            <img src={logo} alt="Logo" width="50" height="50" className="d-inline-block align-text-top" />
-          </Link>
+          <img src={logo} alt="Logo" width="50" height="50" className="d-inline-block align-text-top" />
         </div>
       </footer>
     </>
