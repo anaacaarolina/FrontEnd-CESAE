@@ -1,16 +1,12 @@
-import square from "../assets/gray-square.png";
-
-<img src={square} />;
-
-export default function FoodCard() {
+export default function FoodCard({ name, imageName, description, category, price }) {
   return (
     <>
       <div className="food-card">
-        <img src={square} className="dish-image" />
-        <h4 className="dish-name">Nome do Prato</h4>
-        <p className="dish-description">Descrição</p>
-        <p className="dish-category">Categoria</p>
-        <p className="dish-price">€€€</p>
+        {imageName && <img src={`http://localhost:3000/images/${imageName}`} className="dish-image" />}
+        <h4 className="dish-name">{name}</h4>
+        <p className="dish-description">{description}</p>
+        <p className="dish-category">{category}</p>
+        <p className="dish-price">{price}&#8364;</p>
       </div>
     </>
   );

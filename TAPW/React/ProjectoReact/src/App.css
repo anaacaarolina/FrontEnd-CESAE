@@ -103,10 +103,11 @@ footer {
   gap: 2%;
   margin-bottom: 2%;
   flex-wrap: wrap;
-  padding-left: 2%;
+  padding-left: 1%;
 }
 /* ====FOOD CARD==== */
-.food-card {
+.food-card,
+.food-card-clickable {
   flex: 1 1 300px;
   max-width: 320px;
   background-color: var(---light-brown);
@@ -115,9 +116,17 @@ footer {
   border-radius: 20px;
   margin-bottom: 2%;
 }
-.food-card img {
+.food-card img,
+.food-card-clickable img {
+  height: 170px;
   max-width: 80%;
   margin-bottom: 2%;
+}
+.food-card-clickable {
+  cursor: pointer;
+}
+.food-card-clickable.card-selected {
+  outline: var(--green) 2px solid;
 }
 
 /* ====TABLETS==== */

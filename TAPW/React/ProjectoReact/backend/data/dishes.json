@@ -1,0 +1,93 @@
+[
+  {
+    "dishName": "Truffle Burrata Cloud",
+    "dishDescription": "Creamy burrata drizzled with black truffle oil",
+    "dishCategory": "appetizers",
+    "dishPrice": "14",
+    "dishImage": "1764963459407.jpg"
+  },
+  {
+    "dishName": "Amalfi Lemon Scallops",
+    "dishDescription": "Seared scallops with bright lemon-herb butter sauce",
+    "dishCategory": "appetizers",
+    "dishPrice": "17",
+    "dishImage": "1764963491071.webp"
+  },
+  {
+    "dishName": "Prosciutto Rosé Melon",
+    "dishDescription": "Aged prosciutto wrapped around chilled rosé-poached melon",
+    "dishCategory": "appetizers",
+    "dishPrice": "13",
+    "dishImage": "1764963528075.jpeg"
+  },
+  {
+    "dishName": "Saffron Risotto Royale",
+    "dishDescription": "Silky risotto infused with premium saffron threads",
+    "dishCategory": "mains",
+    "dishPrice": "24",
+    "dishImage": "1764963550381.jpg"
+  },
+  {
+    "dishName": "Tuscan Herb Ribeye",
+    "dishDescription": "Chargrilled ribeye finished with rosemary garlic butter",
+    "dishCategory": "mains",
+    "dishPrice": "32",
+    "dishImage": "1764963578625.webp"
+  },
+  {
+    "dishName": "Wild Boar Pappardelle",
+    "dishDescription": "Slow-braised boar ragu over fresh pappardelle pasta",
+    "dishCategory": "mains",
+    "dishPrice": "22",
+    "dishImage": "1764963604714.jpg"
+  },
+  {
+    "dishName": "Lobster Tagliolini Luxe",
+    "dishDescription": "Hand-cut tagliolini with buttery lobster reduction",
+    "dishCategory": "mains",
+    "dishPrice": "29",
+    "dishImage": "1764963627994.jpg"
+  },
+  {
+    "dishName": "Porcini Velvet Gnocchi",
+    "dishDescription": "Soft gnocchi coated in creamy porcini mushroom sauce",
+    "dishCategory": "mains",
+    "dishPrice": "21",
+    "dishImage": "1764963651389.jpeg"
+  },
+  {
+    "dishName": "Espresso Silk Tiramisu",
+    "dishDescription": "Light tiramisu layered with rich espresso crema",
+    "dishCategory": "dessert",
+    "dishPrice": "10",
+    "dishImage": "1764963673385.webp"
+  },
+  {
+    "dishName": "Sicilian Citrus Cannoli",
+    "dishDescription": "Crisp shells filled with zesty ricotta cream",
+    "dishCategory": "dessert",
+    "dishPrice": "9",
+    "dishImage": "1764963749162.webp"
+  },
+  {
+    "dishName": "Dark Chocolate Amaretto Torte",
+    "dishDescription": "Dense torte infused with smooth amaretto hints",
+    "dishCategory": "dessert",
+    "dishPrice": "11",
+    "dishImage": "1764963769723.webp"
+  },
+  {
+    "dishName": "Honey-Fig Panna Cotta",
+    "dishDescription": "Velvet panna cotta topped with sweet glazed figs",
+    "dishCategory": "dessert",
+    "dishPrice": "10",
+    "dishImage": "1764963789818.jpg"
+  },
+  {
+    "dishName": "Vanilla Olive Oil Gelato",
+    "dishDescription": "Creamy gelato with delicate olive oil aroma",
+    "dishCategory": "dessert",
+    "dishPrice": "8",
+    "dishImage": "1764963808479.jpg"
+  }
+]

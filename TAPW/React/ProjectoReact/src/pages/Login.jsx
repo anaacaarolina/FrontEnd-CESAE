@@ -1,15 +1,30 @@
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import icon_login from "../assets/icon_login.svg";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 <img src={icon_login} />;
 
 export default function Login() {
+  const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
+
+  async function handleLogin(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+
+    try {
+      await login(data);
+      navigate("/", { state: { message: "Login succesful!" } });
+      window.location.reload();
+    } catch (error) {
+      alert("Login failed:" + error);
+    }
+  }
+
   return (
     <>
-      <div>
-        <h2>Login</h2>
-      </div>
       <div className="container py-5 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col col-xl-10">
@@ -20,23 +35,19 @@ export default function Login() {
                 </div>
                 <div className="col-md-6 col-lg-7 d-flex align-items-center">
                   <div className="card-body p-4 text-black">
-                    <form>
-                      <div className="logo-container">
-                        <img src="../assets/icon_login.svg" className="login-card-logo" />
-                      </div>
-
+                    <form onSubmit={handleLogin} action={"/backend"}>
                       <h4 className="fw-normal mb-3 pb-3">
                         <strong>Sign into your account</strong>
                       </h4>
 
                       <div data-mdb-input-init className="form-outline mb-4">
                         <label className="form-label">Email address</label>
-                        <input type="email" id="login-email" className="form-control form-control-lg" />
+                        <input name="email" type="email" id="login-email" className="form-control form-control-lg" />
                       </div>
 
                       <div data-mdb-input-init className="form-outline mb-4">
                         <label className="form-label">Password</label>
-                        <input type="password" id="login-password" className="form-control form-control-lg" />
+                        <input name="password" type="password" id="login-password" className="form-control form-control-lg" />
                       </div>
 
                       <div className="pt-1 mb-4">
@@ -44,15 +55,11 @@ export default function Login() {
                           Login
                         </button>
                       </div>
-
-                      <a className="login-forgot-password" href="#!">
-                        Forgot password?
-                      </a>
                       <p className="login-register">
                         Don't have an account?{" "}
-                        <a href="#!" className="login-register-link">
+                        <Link to="/register" className="login-register-link">
                           Register here
-                        </a>
+                        </Link>
                       </p>
                     </form>
                   </div>

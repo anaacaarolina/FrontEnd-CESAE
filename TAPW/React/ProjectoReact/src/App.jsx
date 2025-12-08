@@ -9,6 +9,8 @@ import Order from "./pages/Order.jsx";
 import Register from "./pages/Register.jsx";
 import LayoutMaster from "./components/layouts/LayoutMaster.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
+import { AuthProvider } from "./contexts/AuthContext.jsx";
+import ProtectedRoute from "./auth/protectedRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +19,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <HomePage /> },
-      { path: "/kitchen", element: <Kitchen /> },
+      { path: "/kitchen", element: <ProtectedRoute element={<Kitchen />} roles={["kitchen", "admin"]} /> },
       { path: "/login", element: <Login /> },
-      { path: "/manager", element: <Manager /> },
+      { path: "/manager", element: <ProtectedRoute element={<Manager />} roles={["manager", "admin"]} /> },
       { path: "/menu", element: <Menu /> },
-      { path: "/order", element: <Order /> },
+      { path: "/order", element: <ProtectedRoute element={<Order />} roles={["customer", "admin"]} /> },
       { path: "register", element: <Register /> },
     ],
   },
@@ -29,7 +31,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </>
   );
 }

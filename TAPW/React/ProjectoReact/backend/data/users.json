@@ -1,0 +1,30 @@
+[
+  {
+    "email": "teste@teste.com",
+    "password": "teste@teste.com",
+    "firstName": "Carolina",
+    "lastName": "Pinto",
+    "role": "admin"
+  },
+  {
+    "email": "customer@customer.com",
+    "password": "customer@customer.com",
+    "firstName": "Customer",
+    "lastName": "Customer",
+    "role": "customer"
+  },
+  {
+    "email": "manager@manager.com",
+    "password": "manager@manager.com",
+    "firstName": "Manager",
+    "lastName": "Manager",
+    "role": "manager"
+  },
+  {
+    "email": "kitchen@kitchen.com",
+    "password": "kitchen@kitchen.com",
+    "firstName": "Kitchen",
+    "lastName": "Kitchen",
+    "role": "kitchen"
+  }
+]

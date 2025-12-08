@@ -1,10 +1,21 @@
 import { Link, Outlet } from "react-router-dom";
 import logo from "../../assets/icon_navbar.svg";
 import "../../App.css";
+import { useEffect, useState } from "react";
 
 <img src={logo} />;
 
 export default function LayoutMaster() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+    // console.log(user);
+  }, []);
+
   return (
     <>
       <header>
@@ -20,29 +31,54 @@ export default function LayoutMaster() {
 
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {user ? user.firstName : "Guest"}
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => {
+                          localStorage.removeItem("user");
+                          window.location.reload();
+                        }}
+                      >
+                        Logout
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+
                 <li className="nav-item">
                   <Link to="/menu" className="nav-link">
                     Menu
                   </Link>
                 </li>
 
-                <li className="nav-item">
-                  <Link to="/manager" className="nav-link">
-                    Manager
-                  </Link>
-                </li>
+                {user && user.role && ["manager", "admin"].includes(user.role) && (
+                  <li className="nav-item">
+                    <Link to="/manager" className="nav-link">
+                      Manager
+                    </Link>
+                  </li>
+                )}
 
-                <li className="nav-item">
-                  <Link to="/kitchen" className="nav-link">
-                    Kitchen
-                  </Link>
-                </li>
+                {user && user.role && ["kitchen", "admin"].includes(user.role) && (
+                  <li className="nav-item">
+                    <Link to="/kitchen" className="nav-link">
+                      Kitchen
+                    </Link>
+                  </li>
+                )}
 
-                <li className="nav-item">
-                  <Link to="/order" className="nav-link">
-                    Place Order
-                  </Link>
-                </li>
+                {user && user.role && ["customer", "admin"].includes(user.role) && (
+                  <li className="nav-item">
+                    <Link to="/order" className="nav-link">
+                      Place Order
+                    </Link>
+                  </li>
+                )}
                 <li className="nav-item">
                   <Link to="/login" className="nav-link">
                     Login
@@ -59,7 +95,6 @@ export default function LayoutMaster() {
         </nav>
       </header>
       <Outlet />
-
       <footer className=" text-center text-lg-start">
         <div className="text-center p-3">© 2025 Copyright: Carolina Pinto</div>
         <div className="text-center p-3">
