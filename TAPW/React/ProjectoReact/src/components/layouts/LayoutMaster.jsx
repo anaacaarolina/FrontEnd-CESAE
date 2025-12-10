@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 export default function LayoutMaster() {
   const [user, setUser] = useState(null);
 
+  //Carrega a informação do utilizador do LocalStorage
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
@@ -55,7 +56,7 @@ export default function LayoutMaster() {
                     Menu
                   </Link>
                 </li>
-
+                {/* Apenas são mostrados os links que o utilizador consegue aceder */}
                 {user && user.role && ["manager", "admin"].includes(user.role) && (
                   <li className="nav-item">
                     <Link to="/manager" className="nav-link">

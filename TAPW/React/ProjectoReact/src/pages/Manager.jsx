@@ -100,7 +100,7 @@ export default function Manager() {
           </select>
         </td>
         <td>
-          {/* O hanle role change recebe o email e o elemento select do respetivo user */}
+          {/* O handle role change recebe o email e o elemento select do respetivo user */}
           <button onClick={() => handleRoleChange(user.email, document.getElementById(user.email))}>Confirm</button>
         </td>
       </tr>

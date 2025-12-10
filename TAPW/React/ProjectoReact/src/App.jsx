@@ -10,7 +10,7 @@ import Register from "./pages/Register.jsx";
 import LayoutMaster from "./components/layouts/LayoutMaster.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import { AuthProvider } from "./contexts/AuthContext.jsx";
-import ProtectedRoute from "./auth/protectedRoute.jsx";
+import ProtectedRoute from "./auth/ProtectedRoute.jsx";
 
 const router = createBrowserRouter([
   {

@@ -26,5 +26,12 @@
     "firstName": "Kitchen",
     "lastName": "Kitchen",
     "role": "kitchen"
+  },
+  {
+    "email": "aaa@aaa",
+    "password": "aaa@aaa",
+    "firstName": "Ana",
+    "lastName": "Oliveira",
+    "role": "customer"
   }
 ]
