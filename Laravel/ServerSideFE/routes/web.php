@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UtilController::class, 'home'])->name('utils.welcome');
 
-Route::get('/users',  [UserController::class, 'addUsersPage'])->name('users.users');
+Route::get('/add-users',  [UserController::class, 'addUsersPage'])->name('users.addUsers');
 
-Route::get('/add-users',  [UserController::class, 'usersPage'])->name('users.addUsers');
+Route::get('/users',  [UserController::class, 'usersPage'])->name('users.users');
 
 Route::get('/hello', [UtilController::class, 'hello'])->name('utils.hello');
 
@@ -17,6 +17,4 @@ Route::get(
     [UtilController::class, 'turma']
 );
 
-Route::fallback(function () {
-    return view('utils.fallback');
-});
+Route::fallback([UtilController::class, 'fallback']);

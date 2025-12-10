@@ -42,7 +42,7 @@
                                 Users
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('users.users') }}"">Todos os
+                                <li><a class="dropdown-item" href="{{ route('users.users') }}">Todos os
                                         Utilizadores</a></li>
                                 <li><a class="dropdown-item" href="{{ route('users.addUsers') }}">Adicionar
                                         Utilizadores</a></li>

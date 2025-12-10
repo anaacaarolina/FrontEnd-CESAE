@@ -25,4 +25,8 @@ class UtilController extends Controller
 
         return "<h1>Turma: $name</h1>";
     }
+    public function fallback()
+    {
+        return view('utils.fallback');
+    }
 }
