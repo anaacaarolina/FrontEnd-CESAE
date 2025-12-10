@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -43,5 +44,29 @@ class UserController extends Controller
         ];
         // dd($cesaeInformation);
         return view('users.users', compact('cesaeInformation', 'students'));
+    }
+
+
+    public function insertUserIntoDB()
+    {
+        //validar se dados estão em conformidade com a estrutura da base de dados
+
+        //se passar em todas as validações, insere então na base de dados
+        DB::table('users')
+            ->insert([
+                'name' => 'Rafaela',
+                'email' => 'rafaela4@email.com',
+                'password' => 'rafaela12345'
+            ]);
+        return response()->json('user inserido com sucesso');
+    }
+    public function updateUserFromDB()
+    {
+        DB::table('users')
+            ->where('id', 8)
+            ->update([
+                'email_verified_at' => now()
+            ]);
+        return response()->json('user modificado com sucesso');
     }
 }

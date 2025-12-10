@@ -10,6 +10,11 @@ Route::get('/add-users',  [UserController::class, 'addUsersPage'])->name('users.
 
 Route::get('/users',  [UserController::class, 'usersPage'])->name('users.users');
 
+//função raw que insere um user na Base de Dados (teste de dbquery builder sem frontend)
+Route::get('/insertintodb', [userController::class, 'insertUserIntoDB']);
+
+Route::get('/updatefromdb', [userController::class, 'updateUserFromDB']);
+
 Route::get('/hello', [UtilController::class, 'hello'])->name('utils.hello');
 
 Route::get(
