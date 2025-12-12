@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UtilController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TasksController;
 
 Route::get('/', [UtilController::class, 'home'])->name('utils.welcome');
 
@@ -16,6 +17,10 @@ Route::get('/insertintodb', [userController::class, 'insertUserIntoDB']);
 Route::get('/updatefromdb', [userController::class, 'updateUserFromDB']);
 
 Route::get('/hello', [UtilController::class, 'hello'])->name('utils.hello');
+
+Route::get('/tasks', [TasksController::class, 'allTasks'])->name('tasks.allTasks');
+
+Route::get('/insertTasks', [TasksController::class, 'insertTasks']);
 
 Route::get(
     '/turma/{name}',

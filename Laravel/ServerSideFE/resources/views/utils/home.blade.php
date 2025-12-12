@@ -17,5 +17,6 @@
         <li><a href="{{ route('utils.hello') }}">Olá Mundo</a></li>
         <li><a href="{{ route('users.users') }}">Todos os Utilizador</a></li>
         <li><a href="{{ route('users.addUsers') }}">Adicionar Utilizador</a></li>
+        <li><a href="{{ route('tasks.allTasks') }}">Todas as Tarefas</a></li>
     </ul>
 @endsection

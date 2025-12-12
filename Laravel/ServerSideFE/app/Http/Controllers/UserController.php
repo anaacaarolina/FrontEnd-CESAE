@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -42,8 +43,11 @@ class UserController extends Controller
                 'email' => 'ines@email.com',
             ]
         ];
+
+        $users = User::get();
+
         // dd($cesaeInformation);
-        return view('users.users', compact('cesaeInformation', 'students'));
+        return view('users.users', compact('cesaeInformation', 'students', 'users'));
     }
 
 
@@ -53,20 +57,21 @@ class UserController extends Controller
 
         //se passar em todas as validações, insere então na base de dados
         DB::table('users')
-            ->insert([
+            ->updateOrInsert([
                 'name' => 'Rafaela',
                 'email' => 'rafaela4@email.com',
                 'password' => 'rafaela12345'
             ]);
         return response()->json('user inserido com sucesso');
     }
-    public function updateUserFromDB()
-    {
-        DB::table('users')
-            ->where('id', 8)
-            ->update([
-                'email_verified_at' => now()
-            ]);
-        return response()->json('user modificado com sucesso');
-    }
+    // public function updateUserFromDB()
+    // {
+    //     DB::table('users')
+    //         ->where('id', 8)
+    //         ->update([
+    //             'email_verified_at' => now()
+    //         ]);
+    //     return response()->json('user modificado com sucesso');
+    // }
+    // public function updateOrInsert()
 }

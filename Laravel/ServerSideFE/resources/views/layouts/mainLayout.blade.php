@@ -47,13 +47,11 @@
                                 <li><a class="dropdown-item" href="{{ route('users.addUsers') }}">Adicionar
                                         Utilizadores</a></li>
                                 <li>
-                                    <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <a class="nav-link" href="{{ route('tasks.allTasks') }}">Tasks</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
