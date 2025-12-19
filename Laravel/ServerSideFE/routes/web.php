@@ -11,6 +11,11 @@ Route::get('/add-users',  [UserController::class, 'addUsersPage'])->name('users.
 
 Route::get('/users',  [UserController::class, 'usersPage'])->name('users.users');
 
+//Rota que abre a view com toda a informação do user
+Route::get('/viewuser/{id}', [UserController::class, 'viewUser'])->name('users.view');
+
+Route::get('/deleteuser/{id}',  [UserController::class, 'deleteUser'])->name('users.delete');
+
 //função raw que insere um user na Base de Dados (teste de dbquery builder sem frontend)
 Route::get('/insertintodb', [userController::class, 'insertUserIntoDB']);
 
@@ -21,6 +26,10 @@ Route::get('/hello', [UtilController::class, 'hello'])->name('utils.hello');
 Route::get('/tasks', [TasksController::class, 'allTasks'])->name('tasks.allTasks');
 
 Route::get('/insertTasks', [TasksController::class, 'insertTasks']);
+
+Route::get('/viewtask/{id}', [TasksController::class, 'viewtask'])->name('tasks.view');
+
+Route::get('/deletetask/{id}',  [TasksController::class, 'deletetask'])->name('tasks.delete');
 
 Route::get(
     '/turma/{name}',

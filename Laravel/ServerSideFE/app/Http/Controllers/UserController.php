@@ -64,6 +64,35 @@ class UserController extends Controller
             ]);
         return response()->json('user inserido com sucesso');
     }
+
+    public function viewUser($id)
+    {
+        //query que vai buscar o user que estou a clicar
+        $user = DB::table('users')
+            ->where('id', $id)
+            ->first();
+
+
+        //COM MODELO
+        // $user = User::where('id',$id)
+        //         ->first();
+
+        return view('users.viewUsers', compact('user'));
+    }
+
+    public function deleteUser($id)
+    {
+        $user = DB::table('tasks')
+            ->where('user_id', $id)
+            ->delete();
+
+
+        $user = DB::table('users')
+            ->where('id', $id)
+            ->delete();
+
+        return back();
+    }
     // public function updateUserFromDB()
     // {
     //     DB::table('users')

@@ -43,5 +43,35 @@ class TasksController extends Controller
             );
         return response()->json('task inserida com sucesso');
     }
+    public function viewTask($id)
+    {
+        // query que vai buscar o user que estou a clicar
+        // $task = DB::table('tasks')
+        //     ->where('id', $id)
+        //     ->first();
+
+        $task = DB::table('tasks')
+            ->join('users', 'tasks.user_id', 'users.id')
+            ->select('tasks.*', 'users.name as userName')
+            ->find();
+
+
+        //COM MODELO
+        // $task = Task::where('id',$id)
+        //         ->first();
+        // dd($task);
+        return view('tasks.viewTasks', compact('task'));
+    }
+
+
+    public function deleteTask($id)
+    {
+        $user = DB::table('tasks')
+            ->where('id', $id)
+            ->delete();
+
+        return back();
+    }
+    // p
     //
 }

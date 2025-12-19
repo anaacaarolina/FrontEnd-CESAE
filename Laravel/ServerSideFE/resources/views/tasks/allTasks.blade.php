@@ -2,7 +2,7 @@
 
 @section('content')
     <h2>Todas as tarefas</h2>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">id</th>
@@ -11,6 +11,8 @@
                 <th scope="col">Data de conclusão</th>
                 <th scope="col">Status</th>
                 <th scope="col">User</th>
+                <th scope="col">Ver</th>
+                <th scope="col">Apagar</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +30,8 @@
                         <td>Por fazer</td>
                     @endif
                     <td>{{ $task->userName }}</td>
+                    <td><a class="btn btn-info" href="{{ route('tasks.view', $task->id) }}">Ver</a></td>
+                    <td><a class="btn btn-danger" href="{{ route('tasks.delete', $task->id) }}">Apagar</a></td>
                 </tr>
             @endforeach
         </tbody>
