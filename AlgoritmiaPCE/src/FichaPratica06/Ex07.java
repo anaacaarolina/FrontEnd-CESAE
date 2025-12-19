@@ -5,25 +5,25 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Ex07 {
-    public static void contarPalavras() throws FileNotFoundException {
-        File ficheiro = new File("Ficheiros/exercicio7.txt");
-        Scanner conteudo = new Scanner(ficheiro);
+    static void main() throws FileNotFoundException {
+        File ficheiro07 = new File("FichaPratica06/Ficheiros/exercicio_07.txt");
+        Scanner ler = new Scanner(ficheiro07);
 
-        int counterLinhas = 0;
-        int counterPalavras = 0;
-        while (conteudo.hasNextLine()){
-            String linha = conteudo.nextLine();
-            counterLinhas++;
+        int contadorLinhas = 0, contadorPalavras = 0;
+        String linha = " ";
 
-            String [] palavras = linha.split(" ");
-            counterPalavras += palavras.length;
-
+        while(ler.hasNextLine()) {
+            contadorLinhas++;
+            linha = ler.nextLine();
+            String[] palavras = linha.split(" ");
+            contadorPalavras += palavras.length;
         }
-        System.out.println("Linhas: "+counterLinhas);
-        System.out.println("Palavras: "+counterPalavras);
-    }
 
-    public static void main(String[] args) throws FileNotFoundException{
-        contarPalavras();
+
+        System.out.println("Total de palavras: " + contadorPalavras);
+        System.out.println("Total de Linhas: " + contadorLinhas);
+
+        ler.close();
+
     }
 }

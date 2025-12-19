@@ -6,25 +6,25 @@ import java.util.Scanner;
 
 public class Ex05 {
 
-    public static void lerNumeros() throws FileNotFoundException {
-        File ficheiro = new File("Ficheiros/exercicio5.txt");
-        Scanner conteudo = new Scanner(ficheiro);
+    static void main() throws FileNotFoundException {
 
-        String linha = conteudo.nextLine();
-        String[] conteudoLinha = linha.split(" ");
+        //Caminho , qual é o ficheiro
+
+        File ficheiro05 = new File("FichaPratica06/Ficheiros/exercicio_05_1999.txt");
+
+        //Leitor
+        Scanner leitor = new Scanner(ficheiro05);
+
+        //Varivel para guardar o valor da soma
         int soma = 0;
 
-        for (int i = 0; i < conteudoLinha.length; i++) {
-            int numero = Integer.parseInt(conteudoLinha[i]);
-            soma += numero;
+        while(leitor.hasNextInt()){
+            soma += leitor.nextInt();
+
         }
-        System.out.println("Soma: " + soma);
+        System.out.println("A soma do ficheiro 5 é de: " + soma);
 
-        conteudo.close();
+        leitor.close();
 
-    }
-
-    public static void main(String[] args) throws FileNotFoundException {
-        lerNumeros();
     }
 }

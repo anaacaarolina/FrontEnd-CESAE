@@ -8,18 +8,22 @@ import java.io.PrintWriter;
 
 public class Ex02 {
 
-    public static void criarArquivo()throws FileNotFoundException {
-        String conteudo = "Hello! Adoro Programar em JAVA!";
+    static void main() throws FileNotFoundException {
 
-        File ficheiro = new File("Ficheiros/hello.txt");
-        PrintWriter printWriter = new PrintWriter(ficheiro);
+        //Criar o novo arquivo
+        File arquivo = new File ("FichaPratica06/Ficheiros/exercicio_02_Copia.txt");
 
-        printWriter.println(conteudo);
-        printWriter.close();
-    }
+        //Máquina para escrever
+        PrintWriter maquinaEscrever = new PrintWriter(arquivo);
 
-    public static void main(String[] args)throws FileNotFoundException {
-        criarArquivo();
+        //Inserir a mensagem
+    String minhaMensagem = "Novo arquivo foi criado";
+
+    maquinaEscrever.println(minhaMensagem);
+
+    //Fechar a máquina de escrever
+        maquinaEscrever.close();
+
 
     }
 }

@@ -6,22 +6,20 @@ import java.util.Scanner;
 
 public class Ex04 {
 
-    public static void lerCSV() throws FileNotFoundException {
-        File ficheiro = new File("Ficheiros/exercicio4.csv");
-        Scanner conteudo = new Scanner(ficheiro);
+    static void main() throws FileNotFoundException {
 
-        while (conteudo.hasNextLine()) {
-            String linha = conteudo.nextLine();
-            String[] conteudoLinha = linha.split(",");
 
-            for (int i = 0; i < conteudoLinha.length; i++) {
-                System.out.println(conteudoLinha[i]);
-            }
+        File ficheiro04 = new File("FichaPratica06/Ficheiros/exercicio_04.csv");
+
+        Scanner leitor = new Scanner(ficheiro04);
+
+        while(leitor.hasNextLine()){
+            String linha = leitor.nextLine();
+            System.out.println(linha);
+
         }
-        conteudo.close();
-    }
 
-    public static void main(String[] args) throws FileNotFoundException {
-        lerCSV();
+
+        leitor.close();
     }
 }

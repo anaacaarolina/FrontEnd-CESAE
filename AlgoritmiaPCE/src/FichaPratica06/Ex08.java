@@ -7,30 +7,34 @@ import java.util.Scanner;
 
 public class Ex08 {
 
-    public static void specificWord() throws FileNotFoundException {
-        File ficheiroInput = new File ("Ficheiros/exercicio7.txt");
-        File ficheiroOutput = new File("Ficheiros/exercicio8.txt");
+    static void main() throws FileNotFoundException {
 
-        Scanner conteudo = new Scanner(ficheiroInput);
-        PrintWriter writer = new PrintWriter(ficheiroOutput);
+        File ficheiro08 = new File("FichaPratica06/Ficheiros/exercicio_08.txt");
+        Scanner leitor = new Scanner(ficheiro08);
 
-        String palavra = "turma";
+        //Novo ficheiro
+        File novoFicheiro08 = new File("FichaPratica06/Ficheiros/exercicio_08_COPY.txt");
 
-        while (conteudo.hasNextLine()){
-            String linha = conteudo.nextLine();
-            String [] palavras = linha.split("\\s+");
+        PrintWriter maquinaEscrever = new PrintWriter(novoFicheiro08);
 
-            for (String p:palavras){
-                if (p.equals(palavra)){
-                    writer.println(p);
-                }
+        String palavraChave = "turma";
+
+        while(leitor.hasNextLine()){
+            String linha = leitor.nextLine();
+            String[] ArrayPalavras =  linha.split(" ");
+
+            for(int i = 0; i < ArrayPalavras.length; i++){
+              if(ArrayPalavras[i].equals(palavraChave)){
+                  System.out.println(linha); //Só na consola para verificar
+                  maquinaEscrever.println(linha);
+              }
             }
-        }
-        conteudo.close();
-        writer.close();
 
-    }
-    public static void main(String[] args) throws FileNotFoundException{
-        specificWord();
+        }
+
+        leitor.close();
+        maquinaEscrever.close();
+
+
     }
 }
