@@ -53,7 +53,7 @@ class TasksController extends Controller
         $task = DB::table('tasks')
             ->join('users', 'tasks.user_id', 'users.id')
             ->select('tasks.*', 'users.name as userName')
-            ->find();
+            ->first();
 
 
         //COM MODELO
@@ -66,7 +66,7 @@ class TasksController extends Controller
 
     public function deleteTask($id)
     {
-        $user = DB::table('tasks')
+        $task = DB::table('tasks')
             ->where('id', $id)
             ->delete();
 

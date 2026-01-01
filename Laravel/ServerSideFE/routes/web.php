@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GiftController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UtilController;
@@ -30,6 +31,12 @@ Route::get('/insertTasks', [TasksController::class, 'insertTasks']);
 Route::get('/viewtask/{id}', [TasksController::class, 'viewtask'])->name('tasks.view');
 
 Route::get('/deletetask/{id}',  [TasksController::class, 'deletetask'])->name('tasks.delete');
+
+Route::get('/gifts', [GiftController::class, 'giftsPage'])->name('gifts.gifts');
+
+Route::get('/viewgift/{id}', [GiftController::class, 'viewGift'])->name('gifts.view');
+
+Route::get('/deletegift/{id}',  [GiftController::class, 'deleteGift'])->name('gifts.delete');
 
 Route::get(
     '/turma/{name}',

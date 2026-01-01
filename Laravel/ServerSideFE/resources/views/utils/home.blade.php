@@ -18,5 +18,8 @@
         <li><a href="{{ route('users.users') }}">Todos os Utilizador</a></li>
         <li><a href="{{ route('users.addUsers') }}">Adicionar Utilizador</a></li>
         <li><a href="{{ route('tasks.allTasks') }}">Todas as Tarefas</a></li>
+        <b>
+            <li><a href="{{ route('gifts.gifts') }}">Lista de Prendas</a></li>
+        </b>
     </ul>
 @endsection
