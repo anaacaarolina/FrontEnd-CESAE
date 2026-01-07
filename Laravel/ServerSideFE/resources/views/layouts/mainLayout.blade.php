@@ -54,6 +54,9 @@
                             <a class="nav-link" href="{{ route('tasks.allTasks') }}">Tasks</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('tasks.addTasks') }}">Adicionar Tasks</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('gifts.gifts') }}">Prendas</a>
                         </li>
                     </ul>

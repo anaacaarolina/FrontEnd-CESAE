@@ -1,6 +1,9 @@
     @extends('layouts.mainLayout')
 
     @section('content')
+        @if (session('message'))
+            <div class="alert alert-success">{{ session('message') }}</div>
+        @endif
         <h2>Olá! Aqui tens uma lista com todos os utilizadores </h2>
         <p>Nome: {{ $cesaeInformation['name'] }}</p>
         <p>Morada: {{ $cesaeInformation['address'] }}</p>

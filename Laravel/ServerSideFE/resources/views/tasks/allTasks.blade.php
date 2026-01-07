@@ -1,6 +1,9 @@
 @extends('layouts.mainLayout')
 
 @section('content')
+    @if (session('message'))
+        <div class="alert alert-success">{{ session('message') }}</div>
+    @endif
     <h2>Todas as tarefas</h2>
     <table class="table">
         <thead>

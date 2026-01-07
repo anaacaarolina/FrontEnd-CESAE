@@ -22,9 +22,16 @@ Route::get('/insertintodb', [userController::class, 'insertUserIntoDB']);
 
 Route::get('/updatefromdb', [userController::class, 'updateUserFromDB']);
 
+//rota que pega nos dados do formulário e os envia para o servidor
+Route::post('/user-store', [UserController::class, 'storeUser'])->name('users.store');
+
 Route::get('/hello', [UtilController::class, 'hello'])->name('utils.hello');
 
 Route::get('/tasks', [TasksController::class, 'allTasks'])->name('tasks.allTasks');
+
+Route::get('/add-tasks', [TasksController::class, 'addTaskPage'])->name('tasks.addTasks');
+
+Route::post('/task-store', [TasksController::class, 'storeTask'])->name('tasks.store');
 
 Route::get('/insertTasks', [TasksController::class, 'insertTasks']);
 
