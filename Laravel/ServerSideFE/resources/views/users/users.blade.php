@@ -25,8 +25,17 @@
                     <th scope="col">Nome</th>
                     <th scope="col">Email</th>
                     <th scope="col">Nif</th>
-                    <th scope="col">Ver</th>
-                    <th scope="col">Apagar</th>
+                    @if (Route::has('login'))
+                        @auth
+                            <th scope="col">Ver</th>
+                            @if (Auth::user()->email == 'admin@gmail.com')
+                                <th scope="col">Apagar</th>
+                            @endif
+                        @else
+                            <th></th>
+                            <th></th>
+                        @endauth
+                    @endif
                 </tr>
             </thead>
             <tbody>
@@ -36,9 +45,17 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->nif }}</td>
-                        <td><a class="btn btn-info" href="{{ route('users.view', $user->id) }}">Ver</a></td>
-                        <td><a class="btn btn-danger" href="{{ route('users.delete', $user->id) }}">Apagar</a></td>
-
+                        @if (Route::has('login'))
+                            @auth
+                                <td><a class="btn btn-info" href="{{ route('users.view', $user->id) }}">Ver</a></td>
+                                @if (Auth::user()->email == 'admin@gmail.com')
+                                    <td><a class="btn btn-danger" href="{{ route('users.delete', $user->id) }}">Apagar</a></td>
+                                @endif
+                            @else
+                                <th></th>
+                                <th></th>
+                            @endauth
+                        @endif
                     </tr>
                 @endforeach
             </tbody>

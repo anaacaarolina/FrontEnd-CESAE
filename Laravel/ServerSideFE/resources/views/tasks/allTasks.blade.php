@@ -26,10 +26,10 @@
                     <td>{{ $task->name }}</td>
                     <td>{{ $task->description }}</td>
                     <td>{{ $task->due_at }}</td>
-                    @if ($task->status === 1)
+                    @if ($task->status === \App\Models\Task::STATUSDONE)
                         <td>Terminado</td>
                     @endif
-                    @if ($task->status === 0)
+                    @if ($task->status === \App\Models\Task::STATUSTODO)
                         <td>Por fazer</td>
                     @endif
                     <td>{{ $task->userName }}</td>

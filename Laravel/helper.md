@@ -26,6 +26,7 @@ composer create-project Laravel/Laravel WebServerSide
 - `php artisan make:migration add_address_to_users_table` (migração para alteração da tabela Users)
 - `php artisan make:model ONomeDoModelo` (criação do modelo - nome da tabela em singular, primeira letra em maiúscula)
 - `php artisan make:model Note -m` (cria modelo e ao mesmo tempo cria migração para a tabela correspondente. neste caso cria a migração para a tabela Notes e o modelo Note)
+- `php artisan route:list` (mostra uma lista com todas as rotas)
 
 ### Rotas com Controller
 

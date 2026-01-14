@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -53,6 +54,26 @@ class TasksController extends Controller
 
         return redirect()->route('tasks.allTasks')->with('message', 'Tarefa adicionada com sucesso');
     }
+    public function updateTask(Request $request)
+    {
+
+        $request->validate([
+            'description' => 'required|string',
+            'userId' => 'required|string',
+            'dueDate' => 'required',
+            'status' => 'required'
+        ]);
+        DB::table('tasks')
+            ->where('id', $request->id)
+            ->update([
+                'description' => $request->description,
+                'user_id' => $request->userId,
+                'due_at' => $request->dueDate,
+                'status' => $request->status
+            ]);
+
+        return redirect()->route('tasks.allTasks')->with('message', 'Tarefa atualizada com sucesso');
+    }
 
     public function insertTasks()
     {
@@ -85,14 +106,18 @@ class TasksController extends Controller
         $task = DB::table('tasks')
             ->join('users', 'tasks.user_id', 'users.id')
             ->select('tasks.*', 'users.name as userName')
+            ->where('tasks.id', $id)
             ->first();
 
+        $users = DB::table('users')
+            ->select('id', 'name')
+            ->get();
 
         //COM MODELO
         // $task = Task::where('id',$id)
         //         ->first();
         // dd($task);
-        return view('tasks.viewTasks', compact('task'));
+        return view('tasks.viewTasks', compact('task', 'users'));
     }
 
 

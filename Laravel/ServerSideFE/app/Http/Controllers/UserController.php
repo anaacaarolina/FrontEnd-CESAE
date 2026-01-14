@@ -111,6 +111,25 @@ class UserController extends Controller
 
         return back();
     }
+
+    public function updateUser(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:50',
+
+        ]);
+
+        DB::table('users')
+            ->where('id', $request->id)
+            ->update([
+                'name' => $request->name,
+                'address' => $request->address,
+                'nif' => $request->nif,
+
+            ]);
+
+        return redirect()->route('users.users')->with('message', 'Contacto atualizado com sucesso');
+    }
     // public function updateUserFromDB()
     // {
     //     DB::table('users')

@@ -35,6 +35,15 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    const USER_TYPE_OTHERS = 0;
+    const USER_TYPE_ADMIN = 1;
+
+    //código do chatgpt
+    // public function isAdmin(): bool
+    // {
+    //     return $this->user_type === self::USER_TYPE_ADMIN;
+    // }
+
     /**
      * Get the attributes that should be cast.
      *
