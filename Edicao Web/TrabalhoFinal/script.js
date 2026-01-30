@@ -2,9 +2,11 @@
 document.getElementById("formulario-contato").addEventListener("submit", function (event) {
   event.preventDefault();
 
+  formulario = event.target;
+
   let nome = document.getElementById("nome").value;
   let email = document.getElementById("email").value;
-  let contacto = document.getElementById("contatoFormulario").value;
+  var contacto = document.getElementById("contatoFormulario").value;
   let escola = document.getElementById("regiao").value;
   let mensagem = document.getElementById("mensagem").value;
 
@@ -22,9 +24,16 @@ document.getElementById("formulario-contato").addEventListener("submit", functio
   }
   if (mensagem === "") {
     alert("Por favor, preencha a mensagem.");
-  } else {
-    alert("Formulário enviado com sucesso!");
   }
+
+  envioForcumlario({ nome, email, contacto, escola, mensagem })
+    .then(() => {
+      alert("Formulário enviado com sucesso!");
+      formulario.reset();
+    })
+    .catch(() => {
+      alert("Erro ao enviar o formulário");
+    });
 });
 
 // Animação dos cards dos cursos - REMOVIDO (animação feita no CSS)
@@ -77,6 +86,15 @@ botaoTopo.addEventListener("click", () => {
 
 // DESAFIOS EXTRA ESCOLHER 3
 // Implementar envio de formulário de contacto sem dar refresh à página com AJAX
+
+function envioForcumlario(data) {
+  return new Promise((resolve) => {
+    // console.log("Dados: ", data);
+    setTimeout(() => {
+      resolve();
+    }, 500);
+  });
+}
 
 // Criar modais para cada curso
 //objeto com info dos cursos
@@ -178,62 +196,47 @@ document.getElementById("modalFecharFooter").onclick = fecharModal;
 // Implementar um carrossel no sobre nós
 
 // Integrar uma api externa
-//Leaflet -> https://leafletjs.com/examples/quick-start/
-const footer = document.querySelector("footer");
-const seccaoMapa = document.createElement("section");
-seccaoMapa.id = "seccaoMapa";
-seccaoMapa.style.textAlign = "center";
-seccaoMapa.style.marginBottom = "25px";
-footer.parentNode.insertBefore(seccaoMapa, footer);
+const configScript = document.createElement("script");
+configScript.src = "../../config.js";
+configScript.async = false;
 
-const tituloSeccaoMapa = document.createElement("h2");
-tituloSeccaoMapa.textContent = "Onde Estamos";
-seccaoMapa.appendChild(tituloSeccaoMapa);
+configScript.onload = () => {
+  carregarMapa();
+};
+document.head.appendChild(configScript);
 
-//Adicionar os links do Leaflet no HTML
-const cssLeaflet = document.createElement("link");
-cssLeaflet.rel = "stylesheet";
-cssLeaflet.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
-document.head.appendChild(cssLeaflet);
+function carregarMapa() {
+  const footer = document.querySelector("footer");
+  const seccaoMapa = document.createElement("section");
+  seccaoMapa.id = "seccaoMapa";
+  seccaoMapa.style.textAlign = "center";
+  seccaoMapa.style.marginBottom = "25px";
+  footer.parentNode.insertBefore(seccaoMapa, footer);
 
-const jsLeaflet = document.createElement("script");
-jsLeaflet.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-document.body.appendChild(jsLeaflet);
+  const iframeMapa = document.createElement("iframe");
+  iframeMapa.style.border = "0";
+  iframeMapa.width = "600px";
+  iframeMapa.height = "450px";
+  iframeMapa.loading = "lazy";
+  iframeMapa.allowFullscreen = "true";
+  iframeMapa.referrerPolicy = "no-referrer-when-downgrade";
 
-//Inserir o mapa na página
-const mapDiv = document.createElement("div");
-mapDiv.id = "mapaDiv";
-mapDiv.style.height = "300px";
-seccaoMapa.appendChild(mapDiv);
-
-const locais = [
-  { nome: "Porto", latitude: 41.1585, longitude: -8.6503 },
-  { nome: "São João da Madeira", latitude: 40.8853, longitude: -8.4858 },
-  { nome: "Lisboa", latitude: 38.7636, longitude: -9.0938 },
-];
-
-jsLeaflet.onload = () => {
-  //[Coordernadas, zoom level]
-  const mapa = L.map("mapaDiv").setView([40.8853, -8.4858], 16);
-
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(mapa);
-
-  let marker;
-
-  function setLocalMapa(latitude, longitude, legenda) {
-    mapa.setView([latitude, longitude], 16);
-    if (marker) {
-      marker.setLatLng([latitude, longitude]).setPopupContent(legenda).openPopup();
-    } else {
-      marker = L.marker([latitude, longitude]).addTo(mapa).bindPopup(legenda).openPopup();
-    }
+  function setLocalMapa(latitude, longitude) {
+    iframeMapa.src = `https://www.google.com/maps/embed/v1/place?key=${CONFIG.GOOGLE_MAPS_API_KEY}&q=${latitude},${longitude}&zoom=15`;
   }
+  setLocalMapa(40.8853, -8.4858);
+
+  seccaoMapa.appendChild(iframeMapa);
+
+  const locais = [
+    { nome: "Porto", latitude: 41.1585, longitude: -8.6503 },
+    { nome: "São João da Madeira", latitude: 40.8853, longitude: -8.4858 },
+    { nome: "Lisboa", latitude: 38.7636, longitude: -9.0938 },
+  ];
 
   locais.forEach((local) => {
     const botaoLocal = document.createElement("button");
+    botaoLocal.className = "btn btn-primary";
     botaoLocal.textContent = local.nome;
     botaoLocal.style.marginRight = "10px";
     botaoLocal.style.padding = "5px 10px";
@@ -243,4 +246,4 @@ jsLeaflet.onload = () => {
       setLocalMapa(local.latitude, local.longitude, local.nome);
     };
   });
-};
+}
