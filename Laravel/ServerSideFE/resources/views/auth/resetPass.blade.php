@@ -1,7 +1,6 @@
 @extends('layouts.mainLayout')
-
 @section('content')
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('password.email') }}">
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -12,15 +11,8 @@
         @error('email')
             <p class="text-danger"> Erro de email</p>
         @enderror
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input required name="password" type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        @error('password')
-            <p class="text-danger"> Erro de password</p>
-        @enderror
 
-        <button type="submit" class="btn btn-primary">Login</button>
-        <p>Esqueceu-se da password? Clique <a href="{{ route('password.request') }}">aqui</a></p>
+        <button type="submit" class="btn btn-primary">Recuperar Pass</button>
+
     </form>
 @endsection
