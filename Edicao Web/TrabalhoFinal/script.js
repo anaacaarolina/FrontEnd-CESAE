@@ -37,16 +37,6 @@ document.getElementById("formulario-contato").addEventListener("submit", functio
 });
 
 // Animação dos cards dos cursos - REMOVIDO (animação feita no CSS)
-// const cards = document.querySelectorAll("#cursos .card");
-
-// cards.forEach((card) => {
-//   card.addEventListener("mouseover", () => {
-//     card.style.transform = "scale(1.1)";
-//   });
-//   card.addEventListener("mouseout", () => {
-//     card.style.transform = "scale(1.0)";
-//   });
-// });
 
 // Adicionar cursos na lista de cursos
 const lista = document.querySelector("#sobre ul");
@@ -84,7 +74,6 @@ botaoTopo.addEventListener("click", () => {
   });
 });
 
-// DESAFIOS EXTRA ESCOLHER 3
 // Implementar envio de formulário de contacto sem dar refresh à página com AJAX
 
 function envioForcumlario(data) {
@@ -191,9 +180,6 @@ const fecharModal = () => modalCurso.close();
 
 document.getElementById("modalFecharHeader").onclick = fecharModal;
 document.getElementById("modalFecharFooter").onclick = fecharModal;
-// Criar quiz e validação do quiz
-
-// Implementar um carrossel no sobre nós
 
 // Integrar uma api externa
 const configScript = document.createElement("script");
