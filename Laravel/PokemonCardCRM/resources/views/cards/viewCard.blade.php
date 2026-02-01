@@ -3,7 +3,8 @@
 @section('content')
     <h2>{{ $card->name }}</h2>
     <h4>{{ $card->supertype }}</h4>
-    <img src="{{ $card->imageLarge }}">
+    <img src="{{ Str::startsWith($card->imageLarge, ['http://', 'https://']) ? $card->imageLarge : asset('storage/' . $card->imageLarge) }}"
+        class="sets-table-image" />
     @if ($card->hp)
         <p><strong>HP:</strong> {{ $card->hp }}</p>
     @endif
@@ -95,41 +96,5 @@
             <p>€{{ number_format($card->price, 2) }}</p>
         </div>
     @endif
+    <a class="btn btn-primary" href="{{ route('cards.editCard', $card->apiId) }}">Edit</a>
 @endsection
-
-{{-- CARD
-name
-supertype
-imageLarge
-number
-artist
-rarity
-evolvesFrom
-flavorText
-price
-
-
-TYPE
-name
-
-SUBTYPE
-name
-
-ABILITIES
-abilityName
-abilityType
-abilityDescription
-
-ATTACKS
-attackName
-attackDamage
-attackDescription
-attackCosts
-
-WEAKNESSES
-
-RESISTANCES
-
-RETREAT COST
-
-RULES --}}

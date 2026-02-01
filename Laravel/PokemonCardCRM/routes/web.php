@@ -13,11 +13,17 @@ Route::get('/', function () {
 Route::get('/sets', [SetController::class, 'allSets'])->name('sets.allSets');
 Route::get('/sets/{apiId}', [SetController::class, 'viewSet'])->name('sets.viewSet');
 Route::get('/delete-set/{apiId}', [SetController::class, 'deleteSet'])->name('sets.delete');
+Route::get('add-set', [SetController::class, 'addSetPage'])->name('sets.addSet');
+Route::post('set-store', [SetController::class, 'storeSet'])->name('sets.store');
 
 //CARDS
 Route::get('/cards', [CardController::class, 'allCards'])->name('cards.allCards');
 Route::get('/cards/{apiId}', [CardController::class, 'viewCard'])->name('cards.viewCard');
 Route::get('/delete-card/{apiId}', [CardController::class, 'deleteCard'])->name('cards.delete');
+Route::get('add-card', [CardController::class, 'addCardPage'])->name('cards.addCard');
+Route::post('card-store', [CardController::class, 'storecard'])->name('cards.store');
+Route::get('edit-card/{apiId}', [CardController::class, 'editCardPage'])->name('cards.editCard');
+Route::put('/cards/{apiId}', [CardController::class, 'updateCard'])->name('cards.update');
 
 //USERS
 Route::get('/users', [UserController::class, 'allUsers'])->name('users.allUsers');

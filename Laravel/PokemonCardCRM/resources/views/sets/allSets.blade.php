@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>All Sets!</h1>
-
+    <a class="btn btn-primary" href="{{ route('sets.addSet') }}">Add Set</a>
     <table class="table">
         <thead>
             <tr>
@@ -19,7 +19,8 @@
         <tbody>
             @foreach ($sets as $set)
                 <tr>
-                    <td><img src="{{ $set->logo }}" class="sets-table-image" /></td>
+                    <td><img src="{{ Str::startsWith($set->logo, ['http://', 'https://']) ? $set->logo : asset('storage/' . $set->logo) }}"
+                            class="sets-table-image" /></td>
                     <th scope="row">{{ $set->apiId }}</th>
                     <td>{{ $set->name }}</td>
                     <td>{{ $set->series }}</td>

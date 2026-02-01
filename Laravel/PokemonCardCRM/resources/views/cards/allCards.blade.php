@@ -2,7 +2,12 @@
 
 @section('content')
     <h1>Cartas de um determinado set</h1>
+    <a class="btn btn-primary" href="{{ route('cards.addCard') }}">Add Card</a>
 
+    <form action="">
+        <input class="ms-5" type="text" value="{{ request()->query('search') }}" name="search" placeholder="Search">
+        <button class="btn btn-secondary">Search</button>
+    </form>
     <table class="table">
         <thead>
             <tr>
@@ -12,14 +17,13 @@
                 <th scope="col">Supertype</th>
                 <th scope="col">Rarity</th>
                 <th scope="col">Price</th>
-                {{-- <th scope="col">Ver</th>
-                <th scope="col">Apagar</th> --}}
             </tr>
         </thead>
         <tbody>
             @foreach ($cards as $card)
                 <tr>
-                    <td><img src="{{ $card->imageLarge }}" class="cards-table-image" /></td>
+                    <td><img src="{{ Str::startsWith($card->imageLarge, ['http://', 'https://']) ? $card->imageLarge : asset('storage/' . $card->imageLarge) }}"
+                            class="sets-table-image" /></td>
                     <th scope="row">{{ $card->apiId }}</th>
                     <td>{{ $card->name }}</td>
                     <td>{{ $card->supertype }}</td>

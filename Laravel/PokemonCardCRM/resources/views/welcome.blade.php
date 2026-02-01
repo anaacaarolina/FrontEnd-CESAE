@@ -6,11 +6,3 @@
     @endif
     <h1>Hello!</h1>
 @endsection
-
-{{-- Falta fazer:
-a autenticação dos utilizadores
-inserir cartas
-inserir sets
-editar cartas
-procurar cartas
---}}
